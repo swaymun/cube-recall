@@ -1,7 +1,11 @@
-const CACHE_NAME = 'cube-recall-v1';
+const CACHE_NAME = 'cube-recall-v2';
 
 self.addEventListener('install', () => self.skipWaiting());
-self.addEventListener('activate', (event) => event.waitUntil(self.clients.claim()));
+self.addEventListener('activate', (event) => event.waitUntil((async () => {
+  const cacheNames = await caches.keys();
+  await Promise.all(cacheNames.filter((cacheName) => cacheName !== CACHE_NAME).map((cacheName) => caches.delete(cacheName)));
+  await self.clients.claim();
+})()));
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
