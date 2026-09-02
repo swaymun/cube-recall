@@ -217,7 +217,10 @@ function CubeView({ item }: { item: CaseData }) {
       if (!hostRef.current) return;
       const { TwistyPlayer } = await import('cubing/twisty');
       if (disposed || !hostRef.current) return;
-      const setup = item.primary_setup ? `${caseSetup(item)} x2` : caseSetup(item);
+      // cubing.js starts with white on U. Rotate the solved cube first so the
+      // algorithm's U layer is the speedcubing orientation: yellow on top,
+      // white on bottom. Applying x2 after the setup would put the case on D.
+      const setup = `x2 ${caseSetup(item)}`;
       player = new TwistyPlayer({ puzzle: '3x3x3', experimentalSetupAlg: setup, visualization: '3D', background: 'none', controlPanel: 'none', backView: 'none', cameraLatitude: 24, cameraLongitude: 32, cameraDistance: 4.6 });
       player.style.width = '100%';
       player.style.height = '250px';
@@ -227,7 +230,7 @@ function CubeView({ item }: { item: CaseData }) {
     void mount();
     return () => { disposed = true; player?.remove(); };
   }, [item]);
-  return <div className="cube-stage"><div ref={hostRef} className="cube-host" aria-live="polite"><div className="cube-loading">Loading case view…</div></div><span className="cube-caption">drag to inspect · {item.primary_setup ? 'yellow on top' : 'generated case view'}</span></div>;
+  return <div className="cube-stage"><div ref={hostRef} className="cube-host" aria-live="polite"><div className="cube-loading">Loading case view…</div></div><span className="cube-caption">drag to inspect · yellow top · white bottom</span></div>;
 }
 
 function StaticPattern({ item }: { item: CaseData }) {
