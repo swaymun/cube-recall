@@ -44,6 +44,21 @@ function invertAlgorithm(algorithm: string) {
   return algorithm.replace(/[()]/g, '').split(/\s+/).filter(Boolean).reverse().map(invertMove).join(' ');
 }
 
+function directF2LSetup(setup: string, auf: string) {
+  const inverseAuf = invertMove(auf);
+  const moves = setup.split(/\s+/).filter(Boolean);
+  const last = moves.at(-1);
+  const base = (move: string) => move.replace(/[2']+$/, '');
+  if (!last || base(last) !== 'U' || base(inverseAuf) !== 'U') return `${setup} ${inverseAuf}`;
+  const amount = (move: string) => move.includes('2') ? 2 : move.endsWith("'") ? 3 : 1;
+  const combined = (amount(last) + amount(inverseAuf)) % 4;
+  moves.pop();
+  if (combined === 1) moves.push('U');
+  if (combined === 2) moves.push('U2');
+  if (combined === 3) moves.push("U'");
+  return moves.join(' ');
+}
+
 function generatedCase(name: string, algorithm: string, note = ''): CaseData {
   return { name, visual_tokens: [], algorithms: [{ alg: algorithm, note }], primary: algorithm, alternate: '', case_setup: invertAlgorithm(algorithm) };
 }
@@ -180,8 +195,13 @@ function shuffleItems<T>(items: T[]) {
   return copy;
 }
 
-function caseSetup(item: CaseData) {
-  return item.primary_setup?.setup ?? item.case_setup ?? invertAlgorithm(item.primary);
+function caseSetup(item: CaseData, directF2L = false) {
+  const setup = item.primary_setup?.setup ?? item.case_setup ?? invertAlgorithm(item.primary);
+  if (!directF2L || !item.primary_setup?.auf) return setup;
+  // F2L recognition is position-sensitive. The generated setup targets an
+  // AUF-adjusted version of the case, so finish it with the inverse AUF and
+  // land directly on the pictured case without a second adjustment.
+  return directF2LSetup(setup, item.primary_setup.auf);
 }
 
 function moveClass(move: string) {
@@ -208,7 +228,7 @@ function MoveLegend() {
   return <div className="move-legend" aria-label="Move highlighting legend"><span><i className="move-key move-trigger" /> R/U trigger</span><span><i className="move-key move-face" /> face turn</span><span><i className="move-key move-slice" /> slice</span><span><i className="move-key move-rotation" /> rotation</span></div>;
 }
 
-function CubeView({ item }: { item: CaseData }) {
+function CubeView({ item, directF2L = false }: { item: CaseData; directF2L?: boolean }) {
   const hostRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     let disposed = false;
@@ -220,7 +240,7 @@ function CubeView({ item }: { item: CaseData }) {
       // cubing.js starts with white on U. Rotate the solved cube first so the
       // algorithm's U layer is the speedcubing orientation: yellow on top,
       // white on bottom. Applying x2 after the setup would put the case on D.
-      const setup = `x2 ${caseSetup(item)}`;
+      const setup = `x2 ${caseSetup(item, directF2L)}`;
       player = new TwistyPlayer({ puzzle: '3x3x3', experimentalSetupAlg: setup, visualization: '3D', background: 'none', controlPanel: 'none', backView: 'none', cameraLatitude: 24, cameraLongitude: 32, cameraDistance: 4.6 });
       player.style.width = '100%';
       player.style.height = '250px';
@@ -229,7 +249,7 @@ function CubeView({ item }: { item: CaseData }) {
     }
     void mount();
     return () => { disposed = true; player?.remove(); };
-  }, [item]);
+  }, [directF2L, item]);
   return <div className="cube-stage"><div ref={hostRef} className="cube-host" aria-live="polite"><div className="cube-loading">Loading case view…</div></div><span className="cube-caption">drag to inspect · yellow top · white bottom</span></div>;
 }
 
@@ -245,8 +265,8 @@ function OLLPattern({ item }: { item: CaseData }) {
   return <Image className="oll-image" src={`https://raw.githubusercontent.com/Roman-/oll_trainer/master/pic/${caseNumber}.svg`} alt={`${item.name} OLL case`} width={330} height={330} unoptimized draggable={false} onError={() => setImageFailed(true)} />;
 }
 
-function SetupPanel({ item }: { item: CaseData }) {
-  return <section className="setup-panel" aria-label="Case setup"><div className="setup-heading"><span>Setup</span><span className="answer-rule" /></div><code>{caseSetup(item)}</code>{item.primary_setup?.auf && <span className="setup-auf">AUF: <code>{item.primary_setup.auf}</code></span>}<p>Apply this setup to a solved cube before starting the timer.</p></section>;
+function SetupPanel({ item, directF2L = false }: { item: CaseData; directF2L?: boolean }) {
+  return <section className="setup-panel" aria-label="Case setup"><div className="setup-heading"><span>Setup</span><span className="answer-rule" /></div><code>{caseSetup(item, directF2L)}</code>{item.primary_setup?.auf && !directF2L && <span className="setup-auf">AUF: <code>{item.primary_setup.auf}</code></span>}<p>Apply this setup to a solved cube before starting the timer.</p></section>;
 }
 
 function CountCell({ value, tone }: { value: number; tone: 'new' | 'learning' | 'due' }) {
@@ -293,6 +313,7 @@ function StudyView({ deckId, queue, queueIndex, mode, progress, onBack, onShuffl
   const [autoRated, setAutoRated] = useState(false);
   const pointerStarted = useRef(false);
   const title = DECKS.find((deck) => deck.id === deckId)?.title ?? 'Study';
+  const directF2L = deckId === 'f2l';
   const saved = item ? progress[caseKey(deckId, item)] : undefined;
 
   useEffect(() => { if (timerState !== 'running' || startAt == null) return; const update = () => setElapsed(performance.now() - startAt); update(); const timer = window.setInterval(update, 40); return () => window.clearInterval(timer); }, [timerState, startAt]);
@@ -309,8 +330,8 @@ function StudyView({ deckId, queue, queueIndex, mode, progress, onBack, onShuffl
 
   return <main className="page-shell study-shell"><header className="study-header"><button className="back-button" onClick={onBack}><ArrowLeft size={16} /> <span>Decks</span></button><div className="study-title"><span>{title}</span><strong>{queueIndex + 1} / {queue.length}</strong></div><div className="study-actions"><span className={`mode-label ${mode}`}>{mode === 'shuffle' ? 'Shuffle' : 'Due review'}</span><button className="study-shuffle" onClick={onShuffle}><Shuffle size={14} /> Shuffle</button></div></header><div className="study-progress"><span style={{ width: `${(queueIndex / Math.max(queue.length, 1)) * 100}%` }} /></div>
     <section className="study-card"><div className="case-meta"><div><h1>{item.name}</h1></div><span className="case-count">{saved ? `reviewed ${saved.repetitions}×` : 'new card'}</span></div>
-      <button className={`case-visual ${timerState}`} onPointerDown={onPressStart} onPointerUp={onPressEnd} onPointerCancel={() => { pointerStarted.current = false; if (timerState === 'armed') setTimerState('idle'); }} onKeyDown={onKeyDown} onKeyUp={onKeyUp} aria-label={timerState === 'running' ? 'Tap to stop the timer' : 'Hold and release to start the execution timer'}><div className="visual-frame">{deckId === 'oll' ? <OLLPattern item={item} /> : <><CubeView item={item} /><div className="visual-fallback"><StaticPattern item={item} /></div></>}</div><div className="timer-readout">{timerState === 'armed' && <span>Release to start</span>}{timerState === 'idle' && <span>Hold + release to start · tap to stop</span>}{timerState === 'running' && <strong>{formatTime(elapsed)}</strong>}{timerState === 'stopped' && <strong>{formatTime(elapsed)}</strong>}</div></button>
-      <SetupPanel item={item} />
+      <button className={`case-visual ${timerState}`} onPointerDown={onPressStart} onPointerUp={onPressEnd} onPointerCancel={() => { pointerStarted.current = false; if (timerState === 'armed') setTimerState('idle'); }} onKeyDown={onKeyDown} onKeyUp={onKeyUp} aria-label={timerState === 'running' ? 'Tap to stop the timer' : 'Hold and release to start the execution timer'}><div className="visual-frame">{deckId === 'oll' ? <OLLPattern item={item} /> : <><CubeView item={item} directF2L={directF2L} /><div className="visual-fallback"><StaticPattern item={item} /></div></>}</div><div className="timer-readout">{timerState === 'armed' && <span>Release to start</span>}{timerState === 'idle' && <span>Hold + release to start · tap to stop</span>}{timerState === 'running' && <strong>{formatTime(elapsed)}</strong>}{timerState === 'stopped' && <strong>{formatTime(elapsed)}</strong>}</div></button>
+      <SetupPanel item={item} directF2L={directF2L} />
       {isRecognition && <RecognitionPrompt item={item} choices={choices} selected={selectedChoice} onChoose={chooseRecognition} />}
       {!answerShown && !selectedChoice && <button className="dont-know" onClick={revealAsAgain}><RotateCcw size={16} /> I don’t know — show algorithm</button>}
       {answerShown && <AlgorithmReveal item={item} />}
