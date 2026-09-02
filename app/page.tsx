@@ -40,8 +40,8 @@ const DECKS: Array<{
   accent: string;
   source: 'oll' | 'pll';
 }> = [
-  { id: 'oll', title: 'OLL Algorithms', count: 57, description: 'Orient the last layer from a 3D case.', accent: 'yellow', source: 'oll' },
-  { id: 'pll', title: 'PLL Algorithms', count: 21, description: 'Permute the last layer from two sides.', accent: 'blue', source: 'pll' },
+  { id: 'oll', title: 'OLL', count: 57, description: 'Orient the last layer from a 3D case.', accent: 'yellow', source: 'oll' },
+  { id: 'pll', title: 'PLL', count: 21, description: 'Permute the last layer from two sides.', accent: 'blue', source: 'pll' },
   { id: 'pll-recognition', title: 'PLL Recognition', count: 21, description: 'Name the PLL from its two-side pattern.', accent: 'red', source: 'pll' },
 ];
 
@@ -131,19 +131,21 @@ function StaticPattern({ item }: { item: CaseData }) {
   return <div className="pattern-fallback" aria-hidden="true">{Array.from({ length: 25 }, (_, index) => <span key={index} className={`sticker sticker-${tokens[index] ?? 'div'}`} />)}</div>;
 }
 
-function ProgressPill({ value, label, tone }: { value: number; label: string; tone: string }) {
-  return <div className={`progress-pill ${tone}`}><strong>{value}</strong><span>{label}</span></div>;
+function CountCell({ value, tone }: { value: number; tone: 'new' | 'learning' | 'due' }) {
+  return <div className={`count-cell ${tone} ${value === 0 ? 'zero' : ''}`}>{value}</div>;
 }
 
 function DeckDashboard({ progress, onStart }: { progress: ProgressStore; onStart: (deckId: DeckId, mode: SessionMode) => void }) {
   const totals = DECKS.reduce((result, deck) => { const counts = countsFor(deck, progress); result.newCount += counts.newCount; result.learning += counts.learning; result.due += counts.due; return result; }, { newCount: 0, learning: 0, due: 0 });
+  const dayStart = new Date(); dayStart.setHours(0, 0, 0, 0);
+  const studiedToday = Object.values(progress).filter((item) => (item.lastReviewed ?? 0) >= dayStart.getTime()).length;
   return <main className="page-shell dashboard-shell">
-    <section className="intro-row"><div><p className="eyebrow">Last layer practice</p><h1>Decks</h1><p className="lede">Short, focused reps for recognizing and executing OLL and PLL.</p></div><div className="today-box"><span>Today</span><strong>{totals.due} due</strong><small>{totals.newCount} new · {totals.learning} learning</small></div></section>
+    <header className="top-nav"><button className="brand" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Cube Recall</button><nav aria-label="Primary"><span className="nav-link active">Decks</span><span className="nav-link muted">Stats</span></nav><span className="nav-status">{totals.due} due today</span></header>
+    <section className="deck-heading"><h1>Decks</h1></section>
     <section className="deck-table" aria-label="Study decks"><div className="deck-table-head"><span>Deck</span><span>New</span><span>Learn</span><span>Due</span><span aria-hidden="true" /></div>
-      {DECKS.map((deck) => { const counts = countsFor(deck, progress); return <article className="deck-row" key={deck.id}><div className="deck-name-cell"><span className={`deck-mark ${deck.accent}`} aria-hidden="true" /><div><h2>{deck.title}</h2><p>{deck.description}</p></div></div><ProgressPill value={counts.newCount} label="new" tone="new" /><ProgressPill value={counts.learning} label="learn" tone="learning" /><ProgressPill value={counts.due} label="due" tone="due" /><div className="deck-actions"><button className="button button-primary" onClick={() => onStart(deck.id, 'due')}>Study <ChevronRight size={16} /></button><button className="button button-quiet" onClick={() => onStart(deck.id, 'shuffle')} title={`Shuffle ${deck.title}`}><Shuffle size={16} /><span className="desktop-only">Shuffle</span></button></div></article>; })}
+      {DECKS.map((deck) => { const counts = countsFor(deck, progress); return <article className="deck-row" key={deck.id}><span className="deck-name-cell">{deck.title}</span><CountCell value={counts.newCount} tone="new" /><CountCell value={counts.learning} tone="learning" /><CountCell value={counts.due} tone="due" /><div className="deck-actions"><button className="button button-primary" onClick={() => onStart(deck.id, 'due')}>Study <ChevronRight size={15} /></button></div></article>; })}
     </section>
-    <section className="how-it-works"><div><span className="step-number">01</span><div><strong>See the case</strong><p>Picture first. Algorithm stays hidden.</p></div></div><div><span className="step-number">02</span><div><strong>Execute or name it</strong><p>Hold to start, tap to stop, or choose the PLL.</p></div></div><div><span className="step-number">03</span><div><strong>Rate the recall</strong><p>Your next review is scheduled locally.</p></div></div></section>
-    <footer className="site-footer"><span>Cube Recall · a private-by-default study tool</span><span>Case data from CubingApp · cube rendering by cubing.js</span></footer>
+    <footer className="site-footer"><span>Studied {studiedToday} {studiedToday === 1 ? 'case' : 'cases'} today</span><span>Progress is saved on this device.</span></footer>
   </main>;
 }
 
@@ -161,7 +163,7 @@ function RecognitionPrompt({ item, choices, selected, onChoose }: { item: CaseDa
   return <section className="recognition-prompt" aria-label="PLL recognition choices"><p className="prompt-label">Which PLL is this?</p><div className="choice-grid">{choices.map((choice) => { const isSelected = selected === choice.name; const isCorrect = choice.name === item.name; const answerState = selected ? (isCorrect ? 'correct' : isSelected ? 'incorrect' : '') : ''; return <button className={`choice-button ${answerState}`} key={choice.name} onClick={() => onChoose(choice.name)} disabled={Boolean(selected)}>{choice.name}{selected && isCorrect ? ' ✓' : ''}</button>; })}</div></section>;
 }
 
-function StudyView({ deckId, queue, queueIndex, mode, progress, onBack, onNext, onGrade, onSaveTime }: { deckId: DeckId; queue: CaseData[]; queueIndex: number; mode: SessionMode; progress: ProgressStore; onBack: () => void; onNext: () => void; onGrade: (rating: Rating, elapsed?: number) => void; onSaveTime: (elapsed: number) => void }) {
+function StudyView({ deckId, queue, queueIndex, mode, progress, onBack, onShuffle, onNext, onGrade, onSaveTime }: { deckId: DeckId; queue: CaseData[]; queueIndex: number; mode: SessionMode; progress: ProgressStore; onBack: () => void; onShuffle: () => void; onNext: () => void; onGrade: (rating: Rating, elapsed?: number) => void; onSaveTime: (elapsed: number) => void }) {
   const item = queue[queueIndex];
   const isRecognition = deckId === 'pll-recognition';
   const [answerShown, setAnswerShown] = useState(false);
@@ -186,9 +188,9 @@ function StudyView({ deckId, queue, queueIndex, mode, progress, onBack, onNext, 
   const chooseRecognition = (name: string) => { setSelectedChoice(name); setAnswerShown(true); };
   if (!item) return <main className="page-shell"><p>No cards are available.</p></main>;
 
-  return <main className="page-shell study-shell"><header className="study-header"><button className="back-button" onClick={onBack}><ArrowLeft size={17} /> <span>Decks</span></button><div className="study-title"><span>{title}</span><strong>{queueIndex + 1} / {queue.length}</strong></div><span className={`mode-label ${mode}`}>{mode === 'shuffle' ? 'Shuffle' : 'Due review'}</span></header><div className="study-progress"><span style={{ width: `${(queueIndex / Math.max(queue.length, 1)) * 100}%` }} /></div>
-    <section className="study-card"><div className="case-meta"><div><p className="eyebrow">Case</p><h1>{item.name}</h1></div><span className="case-count">{saved ? `reviewed ${saved.repetitions}×` : 'new card'}</span></div>
-      <button className={`case-visual ${timerState}`} onPointerDown={onPressStart} onPointerUp={onPressEnd} onPointerCancel={() => { pointerStarted.current = false; if (timerState === 'armed') setTimerState('idle'); }} onKeyDown={onKeyDown} onKeyUp={onKeyUp} aria-label={timerState === 'running' ? 'Tap to stop the timer' : 'Hold and release to start the execution timer'}><div className="visual-frame"><CubeView item={item} twoSides={deckId !== 'oll'} /><div className="visual-fallback"><StaticPattern item={item} /></div></div><div className="timer-readout">{timerState === 'armed' && <span>Release to start</span>}{timerState === 'idle' && <span>Hold, release, then tap to stop</span>}{timerState === 'running' && <strong>{formatTime(elapsed)}</strong>}{timerState === 'stopped' && <strong>{formatTime(elapsed)}</strong>}</div></button>
+  return <main className="page-shell study-shell"><header className="study-header"><button className="back-button" onClick={onBack}><ArrowLeft size={16} /> <span>Decks</span></button><div className="study-title"><span>{title}</span><strong>{queueIndex + 1} / {queue.length}</strong></div><div className="study-actions"><span className={`mode-label ${mode}`}>{mode === 'shuffle' ? 'Shuffle' : 'Due review'}</span><button className="study-shuffle" onClick={onShuffle}><Shuffle size={14} /> Shuffle</button></div></header><div className="study-progress"><span style={{ width: `${(queueIndex / Math.max(queue.length, 1)) * 100}%` }} /></div>
+    <section className="study-card"><div className="case-meta"><div><h1>{item.name}</h1></div><span className="case-count">{saved ? `reviewed ${saved.repetitions}×` : 'new card'}</span></div>
+      <button className={`case-visual ${timerState}`} onPointerDown={onPressStart} onPointerUp={onPressEnd} onPointerCancel={() => { pointerStarted.current = false; if (timerState === 'armed') setTimerState('idle'); }} onKeyDown={onKeyDown} onKeyUp={onKeyUp} aria-label={timerState === 'running' ? 'Tap to stop the timer' : 'Hold and release to start the execution timer'}><div className="visual-frame"><CubeView item={item} twoSides={deckId !== 'oll'} /><div className="visual-fallback"><StaticPattern item={item} /></div></div><div className="timer-readout">{timerState === 'armed' && <span>Release to start</span>}{timerState === 'idle' && <span>Hold + release to start · tap to stop</span>}{timerState === 'running' && <strong>{formatTime(elapsed)}</strong>}{timerState === 'stopped' && <strong>{formatTime(elapsed)}</strong>}</div></button>
       {isRecognition && <RecognitionPrompt item={item} choices={choices} selected={selectedChoice} onChoose={chooseRecognition} />}
       {!answerShown && !selectedChoice && <button className="dont-know" onClick={revealAsAgain}><RotateCcw size={16} /> I don’t know — show algorithm</button>}
       {answerShown && <AlgorithmReveal item={item} />}
@@ -223,6 +225,6 @@ export default function Home() {
   useEffect(() => { progressRef.current = progress; }, [progress]);
   useEffect(() => { actionsRef.current = { start: startStudy, grade }; }, [grade, startStudy]);
   useEffect(() => { const context = document.modelContext; if (!context?.registerTool) return; const lifecycle = new AbortController(); const register = async () => { await context.registerTool({ name: 'read_cube_recall_decks', title: 'Read deck status', description: 'Read current New, Learning, and Due counts for the three Cube Recall decks.', inputSchema: { type: 'object', properties: {}, additionalProperties: false }, annotations: { readOnlyHint: true }, execute: () => DECKS.map((deck) => ({ deck: deck.title, ...countsFor(deck, progressRef.current) })) }, { signal: lifecycle.signal }); await context.registerTool({ name: 'start_cube_recall_session', title: 'Start study session', description: 'Start a due-review or shuffle session for an OLL, PLL, or PLL recognition deck.', inputSchema: { type: 'object', properties: { deckId: { type: 'string', enum: ['oll', 'pll', 'pll-recognition'] }, mode: { type: 'string', enum: ['due', 'shuffle'] } }, required: ['deckId', 'mode'], additionalProperties: false }, execute: (input) => { const value = input as { deckId?: DeckId; mode?: SessionMode }; if (!value.deckId || !value.mode || !DECKS.some((deck) => deck.id === value.deckId)) throw new Error('Invalid deck or mode'); actionsRef.current.start(value.deckId, value.mode); return { started: true, deckId: value.deckId, mode: value.mode }; } }, { signal: lifecycle.signal }); await context.registerTool({ name: 'rate_cube_recall_card', title: 'Rate current card', description: 'Rate the visible Cube Recall card as Again, Hard, Good, or Easy.', inputSchema: { type: 'object', properties: { rating: { type: 'string', enum: ['again', 'hard', 'good', 'easy'] } }, required: ['rating'], additionalProperties: false }, execute: (input) => { const value = input as { rating?: Rating }; if (!value.rating || !RATING_LABELS.some((rating) => rating.id === value.rating)) throw new Error('Invalid rating'); actionsRef.current.grade(value.rating); return { rated: true, rating: value.rating }; } }, { signal: lifecycle.signal }); }; void register(); return () => lifecycle.abort(); }, []);
-  if (view === 'study') return <StudyView key={`${deckId}:${queueIndex}`} deckId={deckId} queue={queue} queueIndex={queueIndex} mode={mode} progress={progress} onBack={() => setView('dashboard')} onNext={nextCard} onGrade={grade} onSaveTime={saveTime} />;
+  if (view === 'study') return <StudyView key={`${deckId}:${queueIndex}`} deckId={deckId} queue={queue} queueIndex={queueIndex} mode={mode} progress={progress} onBack={() => setView('dashboard')} onShuffle={() => startStudy(deckId, 'shuffle')} onNext={nextCard} onGrade={grade} onSaveTime={saveTime} />;
   return <DeckDashboard progress={progress} onStart={startStudy} />;
 }
