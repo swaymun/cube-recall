@@ -213,15 +213,36 @@ function moveClass(move: string) {
   return 'move-face';
 }
 
+function normalizeMove(move: string) {
+  return move.replace(/2'/g, '2');
+}
+
+function normalizeAlgorithmText(algorithm: string) {
+  return algorithm.replace(/([A-Za-z]+)2'/g, '$12');
+}
+
+function groupLabel(moves: string[]) {
+  const sequence = moves.map(normalizeMove).join(' ');
+  if (sequence === "R U R' U'") return 'sexy';
+  if (sequence === "R' U' R U") return 'anti-sexy';
+  if (sequence === "R' F R F'") return 'sledgehammer';
+  if (sequence === "F R' F' R") return 'hedgehammer';
+  if (sequence === "R U R' F'") return 'J trigger';
+  if (sequence === "R U' R' D" || sequence === "R U R' D'") return 'RUD trigger';
+  return undefined;
+}
+
 function algorithmGroups(algorithm: string) {
   return algorithm.match(/\([^)]*\)|[^\s]+/g)?.map((part) => ({
     grouped: part.startsWith('('),
-    moves: part.replace(/[()]/g, '').split(/\s+/).filter(Boolean),
+    moves: part.replace(/[()]/g, '').split(/\s+/).filter(Boolean).map(normalizeMove),
+    label: part.startsWith('(') ? groupLabel(part.replace(/[()]/g, '').split(/\s+/).filter(Boolean)) : undefined,
   })) ?? [];
 }
 
 function AlgorithmLine({ algorithm, compact = false }: { algorithm: Algorithm; compact?: boolean }) {
-  return <code className={`algorithm-line ${compact ? 'compact' : ''}`} aria-label={algorithm.alg}>{algorithmGroups(algorithm.alg).map((group, groupIndex) => <span className={`move-group ${group.grouped ? 'grouped' : ''}`} key={`${groupIndex}-${group.moves.join('-')}`}>{group.moves.map((move, moveIndex) => <span className={`move-token ${moveClass(move)}`} key={`${move}-${moveIndex}`}>{move}</span>)}</span>)}</code>;
+  const groups = algorithmGroups(algorithm.alg);
+  return <><code className={`algorithm-line ${compact ? 'compact' : ''}`} aria-label={normalizeAlgorithmText(algorithm.alg)}>{groups.map((group, groupIndex) => <span className={`move-group ${group.grouped ? 'grouped' : ''}`} key={`${groupIndex}-${group.moves.join('-')}`}><span className="move-sequence">{group.grouped && <span className="move-paren">(</span>}{group.moves.map((move, moveIndex) => <span className={`move-token ${moveClass(move)}`} key={`${move}-${moveIndex}`}>{move}</span>)}{group.grouped && <span className="move-paren">)</span>}</span>{group.label && <span className="move-group-label">{group.label}</span>}</span>)}</code>{algorithm.note && <small className="algorithm-note">{algorithm.note}</small>}</>;
 }
 
 function MoveLegend() {
@@ -266,7 +287,7 @@ function OLLPattern({ item }: { item: CaseData }) {
 }
 
 function SetupPanel({ item, directF2L = false }: { item: CaseData; directF2L?: boolean }) {
-  return <section className="setup-panel" aria-label="Case setup"><div className="setup-heading"><span>Setup</span><span className="answer-rule" /></div><code>{caseSetup(item, directF2L)}</code>{item.primary_setup?.auf && !directF2L && <span className="setup-auf">AUF: <code>{item.primary_setup.auf}</code></span>}<p>Apply this setup to a solved cube before starting the timer.</p></section>;
+  return <section className="setup-panel" aria-label="Case setup"><div className="setup-heading"><span>Setup</span><span className="answer-rule" /></div><code>{normalizeAlgorithmText(caseSetup(item, directF2L))}</code>{item.primary_setup?.auf && !directF2L && <span className="setup-auf">AUF: <code>{normalizeAlgorithmText(item.primary_setup.auf)}</code></span>}<p>Apply this setup to a solved cube before starting the timer.</p></section>;
 }
 
 function CountCell({ value, tone }: { value: number; tone: 'new' | 'learning' | 'due' }) {
@@ -293,9 +314,10 @@ function RatingButtons({ progress, onRate }: { progress?: Progress; onRate: (rat
 
 function AlgorithmReveal({ item }: { item: CaseData }) {
   const alternates = item.algorithms.slice(1);
+  const primaryAlgorithm = item.algorithms[0] ?? { alg: item.primary, note: '' };
   const [expanded, setExpanded] = useState(false);
   const [highlighted, setHighlighted] = useState(true);
-  return <section className="answer-panel" aria-label="Algorithm answer"><div className="answer-heading"><span>Algorithm</span><span className="answer-rule" /><button className="plain-toggle" onClick={() => setHighlighted((value) => !value)}>{highlighted ? 'Plain moves' : 'Highlight moves'}</button></div>{highlighted ? <AlgorithmLine algorithm={{ alg: item.primary, note: '' }} /> : <code className="algorithm-plain">{item.primary}</code>}{highlighted && <MoveLegend />}{alternates.length > 0 && <><button className="alternate-toggle" onClick={() => setExpanded((value) => !value)}>{expanded ? <ChevronDown size={15} /> : <ChevronRight size={15} />} {expanded ? 'Hide alternates' : `Show ${alternates.length} alternate${alternates.length === 1 ? '' : 's'}`}</button>{expanded && <div className="alternate-list">{alternates.map((algorithm, index) => <div key={`${algorithm.alg}-${index}`}><AlgorithmLine algorithm={algorithm} compact />{algorithm.note && <small>{algorithm.note}</small>}</div>)}</div>}</>}</section>;
+  return <section className="answer-panel" aria-label="Algorithm answer"><div className="answer-heading"><span>Algorithm</span><span className="answer-rule" /><button className="plain-toggle" onClick={() => setHighlighted((value) => !value)}>{highlighted ? 'Plain moves' : 'Highlight moves'}</button></div>{highlighted ? <AlgorithmLine algorithm={primaryAlgorithm} /> : <code className="algorithm-plain">{normalizeAlgorithmText(item.primary)}</code>}{highlighted && <MoveLegend />}{alternates.length > 0 && <><button className="alternate-toggle" onClick={() => setExpanded((value) => !value)}>{expanded ? <ChevronDown size={15} /> : <ChevronRight size={15} />} {expanded ? 'Hide alternates' : `Show ${alternates.length} alternate${alternates.length === 1 ? '' : 's'}`}</button>{expanded && <div className="alternate-list">{alternates.map((algorithm, index) => <div key={`${algorithm.alg}-${index}`}><AlgorithmLine algorithm={algorithm} compact /></div>)}</div>}</>}</section>;
 }
 
 function RecognitionPrompt({ item, choices, selected, onChoose }: { item: CaseData; choices: CaseData[]; selected?: string; onChoose: (name: string) => void }) {
