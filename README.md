@@ -2,6 +2,8 @@
 
 Cube Recall is a local-first, Anki-style study tool for learning Rubik’s Cube algorithms and recognition.
 
+[Open the live site](https://cube-recall.saimun-h-shahee.chatgpt.site)
+
 ## Included decks
 
 - OLL — 57 cases
