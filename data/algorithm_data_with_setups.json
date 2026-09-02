@@ -1,0 +1,6066 @@
+{
+  "f2l": [
+    {
+      "name": "F2L 1",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-d",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><x-f><x-f><div></div><x-f><x-f><div></div><x-f><x-f><x-d><div></div><div></div><x-r><div></div><div></div><x-r><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "F' L F L'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U f R' f'",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U L U' L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U R U' R'",
+      "alternate": "U f R' f'",
+      "primary_setup": {
+        "setup": "R U R'",
+        "auf": "U",
+        "solver_solution": "R U' R'"
+      }
+    },
+    {
+      "name": "F2L 2",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-r",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><x-r><div></div><div></div><x-r><div></div><x-f><x-f><x-f><x-f><x-f><x-f><div></div><div></div><x-d><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "F R' F' R",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U' L' U L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U' R' U R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U' f' L f",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "F R' F' R",
+      "alternate": "U' R' U R",
+      "primary_setup": {
+        "setup": "U2' R U2' R' U2' R B2' L' B2' R' B L B'",
+        "auf": "U2",
+        "solver_solution": "B L' B' R B2 L B2 R' U2 R U2 R' U2"
+      }
+    },
+    {
+      "name": "F2L 3",
+      "visual_tokens": [
+        "div",
+        "x-r",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-d",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><x-r><div></div><div></div><x-u><div></div><div></div><div></div><x-f><div></div><x-f><x-f><div></div><x-f><x-f><x-d><div></div><div></div><x-r><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "F' U' F",
+          "note": "Front Right"
+        },
+        {
+          "alg": "L' U' L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "f' L' f",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "F' U' F",
+      "alternate": "R' U' R",
+      "primary_setup": {
+        "setup": "F' U F U'",
+        "auf": "U'",
+        "solver_solution": "U F' U' F"
+      }
+    },
+    {
+      "name": "F2L 4",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><x-f><x-u><div></div><div></div><div></div><x-r><div></div><x-f><x-f><div></div><x-f><x-f><x-f><div></div><div></div><x-d><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "R U R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "F U F'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "f R f'",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "R U R'",
+      "alternate": "f R f'",
+      "primary_setup": {
+        "setup": "R U' R' U",
+        "auf": "U",
+        "solver_solution": "U' R U R'"
+      }
+    },
+    {
+      "name": "F2L 5",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-d",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><x-f><x-u><div></div><div></div><div></div><x-f><div></div><x-f><x-f><div></div><x-f><x-f><x-d><div></div><div></div><x-r><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U' R U R' U2 R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U2 F R U R' U2 F'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U' R' F R U R' U' F' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U' L U L' U2 L U' L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U' R U R' U2 R U' R'",
+      "alternate": "U' R' F R U R' U' F' R",
+      "primary_setup": {
+        "setup": "U' L2' D' L2' F2' R2' U F2' R2' F2' U2' R' U L2' R2' D L2' R",
+        "auf": "U2",
+        "solver_solution": "R' L2 D' R2 L2 U' R U2 F2 R2 F2 U' R2 F2 L2 D L2 U"
+      }
+    },
+    {
+      "name": "F2L 6",
+      "visual_tokens": [
+        "div",
+        "x-r",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><x-r><div></div><div></div><x-u><div></div><div></div><div></div><x-r><div></div><x-f><x-f><div></div><x-f><x-f><x-f><div></div><div></div><x-d><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U' r U' R' U R U r'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "F2 R U R' U' F2",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U R' U' R U R' U2 R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U' l U' L' U L U l'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U' r U' R' U R U r'",
+      "alternate": "U R' U' R U R' U2 R",
+      "primary_setup": {
+        "setup": "R L F R' F' R2' U2' B2' D2' R F2' D2' B2' R",
+        "auf": "U'",
+        "solver_solution": "R' B2 D2 F2 R' D2 B2 U2 R2 F R F' L' R'"
+      }
+    },
+    {
+      "name": "F2L 7",
+      "visual_tokens": [
+        "div",
+        "x-f",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-d",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><x-f><div></div><div></div><x-u><div></div><div></div><div></div><x-f><div></div><x-f><x-f><div></div><x-f><x-f><x-d><div></div><div></div><x-r><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U' R U2 R' U' R U2 R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "F U R U2 R' U F'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "r U2 R2 U' R2 U' r'",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U' L U2 L' U2 L U' L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U' R U2 R' U' R U2 R'",
+      "alternate": "r U2 R2 U' R2 U' r'",
+      "primary_setup": {
+        "setup": "R U2' R' U R U2' R' U2'",
+        "auf": "U",
+        "solver_solution": "U2 R U2 R' U' R U2 R'"
+      }
+    },
+    {
+      "name": "F2L 8",
+      "visual_tokens": [
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "x-d",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><x-r><div></div><x-u><div></div><div></div><x-r><div></div><x-d><x-f><x-f><div></div><x-f><x-f><div></div><div></div><div></div><div></div><div></div><div></div><x-f><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "y' R' U2 R U R' U2 R y",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U L' U2 L U L' U2 L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U R' U2 R U R' U2 R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "l' U2 L2 U L2 U l",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "y' R' U2 R U R' U2 R y",
+      "alternate": "U R' U2 R U R' U2 R",
+      "primary_setup": {
+        "setup": "F' U2' F U' F' U2' F U2'",
+        "auf": "U2",
+        "solver_solution": "U2 F' U2 F U F' U2 F"
+      }
+    },
+    {
+      "name": "F2L 9",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-d",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><x-r><x-u><div></div><div></div><div></div><x-f><div></div><x-f><x-f><div></div><x-f><x-f><x-d><div></div><div></div><x-r><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U' R U' R' U F' U' F",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U L' U' L U' L' U' L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U R' U' R U' R' U' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "y' U L' U' L U' L' U' L y",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U' R U' R' U F' U' F",
+      "alternate": "U R' U' R U' R' U' R",
+      "primary_setup": {
+        "setup": "F' U2' L F' L' F U' F",
+        "auf": "U'",
+        "solver_solution": "F' U F' L F L' U2 F"
+      }
+    },
+    {
+      "name": "F2L 10",
+      "visual_tokens": [
+        "div",
+        "x-f",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><x-f><div></div><div></div><x-u><div></div><div></div><div></div><x-r><div></div><x-f><x-f><div></div><x-f><x-f><x-f><div></div><div></div><x-d><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U' R U R' U R U R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "F U' R U R' U2 F'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R2 U' F' U F R2",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U' L U L' U L U L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U' R U R' U R U R'",
+      "alternate": "R2 U' F' U F R2",
+      "primary_setup": {
+        "setup": "R2' U R' U F2' D2' L B2' L B2' R2' U2' B2' D2' L2'",
+        "auf": "U",
+        "solver_solution": "L2 D2 B2 U2 R2 B2 L' B2 L' D2 F2 U' R U' R2"
+      }
+    },
+    {
+      "name": "F2L 19",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-r",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><x-f><x-u><div></div><div></div><div></div><x-d><div></div><x-f><x-f><div></div><x-f><x-f><x-r><div></div><div></div><x-f><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U R U2 R' U R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "y' U R U2 R' U R U' R' y",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U R' F' U2 F R U R' U' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U L U2 L' U L U' L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U R U2 R' U R U' R'",
+      "alternate": "U R' F' U2 F R U R' U' R",
+      "primary_setup": {
+        "setup": "R2' U B2' L2' D F2' D' L2' U B2' R2' U' R' D' R D U2' R' U",
+        "auf": "U2",
+        "solver_solution": "U' R U2 D' R' D R U R2 B2 U' L2 D F2 D' L2 B2 U' R2"
+      }
+    },
+    {
+      "name": "F2L 20",
+      "visual_tokens": [
+        "div",
+        "x-r",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-r",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><x-r><div></div><div></div><x-u><div></div><div></div><div></div><x-d><div></div><x-f><x-f><div></div><x-f><x-f><x-r><div></div><div></div><x-f><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U' R U' R2 F R F' R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U' L' U2 L U' L' U L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U' R' U2 R U' R' U R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "y U' R' U2 R U' R' U R y'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U' R U' R2 F R F' R U' R'",
+      "alternate": "U' R' U2 R U' R' U R",
+      "primary_setup": {
+        "setup": "U' F2' D B2' L2' D' F2' U B R' B2' U' B' U' R'",
+        "auf": "U'",
+        "solver_solution": "R U B U B2 R B' U' F2 D L2 B2 D' F2 U"
+      }
+    },
+    {
+      "name": "F2L 21",
+      "visual_tokens": [
+        "div",
+        "div",
+        "x-d",
+        "x-f",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><x-d><x-f><x-u><div></div><div></div><div></div><div></div><x-f><x-f><x-f><div></div><x-f><x-f><div></div><div></div><div></div><div></div><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U R U R' U R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "F R U2 R' F'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "r' U r U2 r' U' r",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U2 L U L' U L U' L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U R U R' U R U' R'",
+      "alternate": "r' U r U2 r' U' r",
+      "primary_setup": {
+        "setup": "R L U L' U' R' U2' B2' R D2' L' F2' L D2' B2'",
+        "auf": "U",
+        "solver_solution": "B2 D2 L' F2 L D2 R' B2 U2 R U L U' L' R'"
+      }
+    },
+    {
+      "name": "F2L 22",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-r",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><x-r><x-u><div></div><div></div><div></div><x-d><div></div><x-f><x-f><div></div><x-f><x-f><x-r><div></div><div></div><x-f><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "r U' r' U2 r U r'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "L' U L U2 L' U' L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U R U2 R' U' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "l U' l' U2 l U l'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "r U' r' U2 r U r'",
+      "alternate": "R' U R U2 R' U' R",
+      "primary_setup": {
+        "setup": "F' B' D2' R' F2' R D2' F2' R2' U2' L2' B D2' L2' U2' B U2'",
+        "auf": "U2",
+        "solver_solution": "U2 B' U2 L2 D2 B' L2 U2 R2 F2 D2 R' F2 R D2 B F"
+      }
+    },
+    {
+      "name": "F2L 11",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-r",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-d",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "div",
+        "x-f",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><x-r><x-f><div></div><x-f><x-f><div></div><x-f><x-f><x-d><div></div><div></div><x-r><div></div><div></div><x-f><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U' R U2 R' U F' U' F",
+          "note": "Front Right"
+        },
+        {
+          "alg": "L' U L U' L' U L U2 L' U L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U R U' R' U R U2 R' U R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U' L U2 L' U f' L' f",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U' R U2 R' U F' U' F",
+      "alternate": "R' U R U' R' U R U2 R' U R",
+      "primary_setup": {
+        "setup": "F' U F U' R U2' R'",
+        "auf": "U'",
+        "solver_solution": "R U2 R' U F' U' F"
+      }
+    },
+    {
+      "name": "F2L 12",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-f",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "x-f",
+        "x-f",
+        "x-r",
+        "x-f",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><x-f><div></div><div></div><x-r><div></div><x-f><x-f><x-r><x-f><x-f><x-f><div></div><div></div><x-d><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "R U' R' U R U' R' U2 R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U L' U2 L U' F U F'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U R' U2 R U' f R f'",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U' L' U L U' L' U2 L U' L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "R U' R' U R U' R' U2 R U' R'",
+      "alternate": "U R' U2 R U' f R f'",
+      "primary_setup": {
+        "setup": "R2' U R2' U' R2' U R2' U2' R2' U' R2' U R U' R U' R2'",
+        "auf": "U",
+        "solver_solution": "R2 U R' U R' U' R2 U R2 U2 R2 U' R2 U R2 U' R2"
+      }
+    },
+    {
+      "name": "F2L 13",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-r",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-d",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><x-r><div></div><div></div><x-f><div></div><x-f><x-f><x-f><x-f><x-f><x-d><div></div><div></div><x-r><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "y' U R' U R U' R' U' R y",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U L' U L U' L' U' L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U R' U R U' R' U' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "y' U L' U L U' L' U' L y",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "y' U R' U R U' R' U' R y",
+      "alternate": "U R' U R U' R' U' R",
+      "primary_setup": {
+        "setup": "F' U2' R2' F' R2' U2' F U2' F' R2' F D' F D R2' F U'",
+        "auf": "U2",
+        "solver_solution": "U F' R2 D' F' D F' R2 F U2 F' U2 R2 F R2 U2 F"
+      }
+    },
+    {
+      "name": "F2L 14",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-f",
+        "x-r",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><x-f><x-r><div></div><x-f><x-f><div></div><x-f><x-f><x-f><div></div><div></div><x-d><div></div><div></div><x-r><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U' R U' R' U R U R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "y U' L U' L' U L U L' y'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "y U' R U' R' U R U R' y'",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U' L U' L' U L U L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U' R U' R' U R U R'",
+      "alternate": "y U' R U' R' U R U R' y'",
+      "primary_setup": {
+        "setup": "R2' U R' U' R2' F2' D2' B2' R D2' F2' U2' L",
+        "auf": "U'",
+        "solver_solution": "L' U2 F2 D2 R' B2 D2 F2 R2 U R U' R2"
+      }
+    },
+    {
+      "name": "F2L 15",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-f",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-r",
+        "x-f",
+        "x-f",
+        "x-d",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><x-f><div></div><div></div><x-f><div></div><x-f><x-f><x-r><x-f><x-f><x-d><div></div><div></div><x-r><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "R U R' U2 R U' R' U R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "L' U L U2 F U F'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U R U2 f R f'",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U L' U2 L U' L' U L U' L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "R U R' U2 R U' R' U R U' R'",
+      "alternate": "R' U R U2 f R f'",
+      "primary_setup": {
+        "setup": "B2' D2' B2' R2' B2' F2' R2' U R2' U' B2' D R' U2' R F2' U' R2' U",
+        "auf": "U",
+        "solver_solution": "U' R2 U F2 R' U2 R D' B2 U R2 U' R2 F2 B2 R2 B2 D2 B2"
+      }
+    },
+    {
+      "name": "F2L 16",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "div",
+        "x-f",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><x-r><x-r><div></div><x-f><x-f><div></div><x-f><x-f><x-f><div></div><div></div><x-d><div></div><div></div><x-f><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "R U' R' U2 F' U' F",
+          "note": "Front Right"
+        },
+        {
+          "alg": "F U' R U' R' U2 F'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U' R U2 R' U R U' R' U R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U' L' U2 f' L' f",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "R U' R' U2 F' U' F",
+      "alternate": "R' U' R U2 R' U R U' R' U R",
+      "primary_setup": {
+        "setup": "F' U L' U L U2' F U2'",
+        "auf": "U2",
+        "solver_solution": "U2 F' U2 L' U' L U' F"
+      }
+    },
+    {
+      "name": "F2L 17",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-f",
+        "x-d",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-r",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><x-f><x-d><div></div><x-f><x-f><div></div><x-f><x-f><x-r><div></div><div></div><x-f><div></div><div></div><x-r><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "R U2 R' U' R U R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "y R U2 R' U' R U R' y'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U2 F R U R' U' F' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U2 L' U' L U L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "R U2 R' U' R U R'",
+      "alternate": "R' U2 F R U R' U' F' R",
+      "primary_setup": {
+        "setup": "D2' B2' F2' U F2' D' F2' U L2' B2' F2' U R' U' R'",
+        "auf": "U'",
+        "solver_solution": "R U R U' F2 B2 L2 U' F2 D F2 U' F2 B2 D2"
+      }
+    },
+    {
+      "name": "F2L 18",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-r",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-r",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><x-r><div></div><div></div><x-d><div></div><x-f><x-f><x-f><x-f><x-f><x-r><div></div><div></div><x-f><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "y' R' U2 R U R' U' R y",
+          "note": "Front Right"
+        },
+        {
+          "alg": "L' U2 L U L' U' L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U2 R U R' U' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U2 F' L' U' L U F L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "y' R' U2 R U R' U' R y",
+      "alternate": "R' U2 R U R' U' R",
+      "primary_setup": {
+        "setup": "D2' L2' R2' U' R2' D R2' U' B2' L2' R2' U' F U F",
+        "auf": "U",
+        "solver_solution": "F' U' F' U R2 L2 B2 U R2 D' R2 U R2 L2 D2"
+      }
+    },
+    {
+      "name": "F2L 23",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-f",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "x-f",
+        "x-f",
+        "x-r",
+        "x-f",
+        "x-f",
+        "x-r",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><x-f><div></div><div></div><x-d><div></div><x-f><x-f><x-r><x-f><x-f><x-r><div></div><div></div><x-f><div></div><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U R U' R' U' R U' R' U R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "F U' R U R' U R U2 R' F'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U R' F R' F' R2 U' R' U R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U L' U2 L U L' U' L U L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U R U' R' U' R U' R' U R U' R'",
+      "alternate": "U R' F R' F' R2 U' R' U R",
+      "primary_setup": {
+        "setup": "F2' D2' L' B2' L2' B2' L' F2' R' B2' U2' F2' D L' B2' F2' R",
+        "auf": "U2",
+        "solver_solution": "R' F2 B2 L D' F2 U2 B2 R F2 L B2 L2 B2 L D2 F2"
+      }
+    },
+    {
+      "name": "F2L 24",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-r",
+        "x-d",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-r",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "div",
+        "x-f",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><x-r><x-d><div></div><x-f><x-f><div></div><x-f><x-f><x-r><div></div><div></div><x-f><div></div><div></div><x-f><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U' R U R2 F R F' R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U' L' U L U L' U L U' L' U L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U' R' U R U R' U R U' R' U R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U2 r U R' U R U2 B r'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U' R U R2 F R F' R U' R'",
+      "alternate": "U' R' U R U R' U R U' R' U R",
+      "primary_setup": {
+        "setup": "U2' F' U2' B' D2' F U2' F' D2' F U2' F' U F U' B",
+        "auf": "U'",
+        "solver_solution": "B' U F' U' F U2 F' D2 F U2 F' D2 B U2 F U2"
+      }
+    },
+    {
+      "name": "F2L 25",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><x-f><div></div><div></div><x-f><x-f><div></div><x-f><x-f><div></div><div></div><x-f><div></div><div></div><x-r><x-r><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U' R' F R F' R U R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U' L' U L F' L F L'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "L' E' L U' L' E L",
+          "note": "Back Right"
+        },
+        {
+          "alg": "y' U' L' U L F' L F L' y",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U' R' F R F' R U R'",
+      "alternate": "L' E' L U' L' E L",
+      "primary_setup": {
+        "setup": "F2' R' F2' R F' U' F2' U F' U",
+        "auf": "U",
+        "solver_solution": "U' F U' F2 U F R' F2 R F2"
+      }
+    },
+    {
+      "name": "F2L 26",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-r",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><x-r><div></div><div></div><div></div><div></div><x-f><x-f><x-f><x-f><x-f><div></div><div></div><x-f><div></div><div></div><x-r><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U R U' R' F R' F' R",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U L F' L' F L' U' L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "y U R U' R' F R' F' R y'",
+          "note": "Back Right"
+        },
+        {
+          "alg": "R E R' U R E' R'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U R U' R' F R' F' R",
+      "alternate": "y U R U' R' F R' F' R y'",
+      "primary_setup": {
+        "setup": "R2' F D2' B L2' F U2' B' D2' U2' F' D R D2' R' D R2' F'",
+        "auf": "U2",
+        "solver_solution": "F R2 D' R D2 R' D' F U2 D2 B U2 F' L2 B' D2 F' R2"
+      }
+    },
+    {
+      "name": "F2L 27",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "div",
+        "x-f",
+        "x-r",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><x-f><div></div><div></div><x-f><x-f><div></div><x-f><x-f><div></div><div></div><x-d><div></div><div></div><x-f><x-r><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "R U' R' U R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "L' U' L U F' L F L'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U2 R' F R F' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U' L' U L U' L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "R U' R' U R U' R'",
+      "alternate": "R' U2 R' F R F' R",
+      "primary_setup": {
+        "setup": "U2' L2' D2' B2' R B2' D2' L' F2' L' U' L' U L F2' U'",
+        "auf": "U'",
+        "solver_solution": "U F2 L' U' L U L F2 L D2 B2 R' B2 D2 L2 U2"
+      }
+    },
+    {
+      "name": "F2L 28",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-r",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><x-r><div></div><div></div><div></div><div></div><x-f><x-f><x-f><x-f><x-f><div></div><div></div><x-r><div></div><div></div><x-d><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "R U R' U' F R' F' R",
+          "note": "Front Right"
+        },
+        {
+          "alg": "L' U L U' L' U L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U R U' R' U R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U2 L F' L' F L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "R U R' U' F R' F' R",
+      "alternate": "R' U R U' R' U R",
+      "primary_setup": {
+        "setup": "D' F2' R2' D R2' U2' F2' U' R2' D' R2' U' F' U F' D F2'",
+        "auf": "U",
+        "solver_solution": "F2 D' F U' F U R2 D R2 U F2 U2 R2 D' R2 F2 D"
+      }
+    },
+    {
+      "name": "F2L 29",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-r",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><x-r><div></div><div></div><div></div><div></div><x-f><x-f><x-f><x-f><x-f><div></div><div></div><x-d><div></div><div></div><x-f><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "R' F R F' U R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "L' U' L U L' U' L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U' R U R' U' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U2 L U' L' f' L' f",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "R' F R F' U R U' R'",
+      "alternate": "R' U' R U R' U' R",
+      "primary_setup": {
+        "setup": "D' F2' U2' B2' L2' F2' U' R2' U2' L2' U2' F' D' F' L2' U",
+        "auf": "U2",
+        "solver_solution": "U' L2 F D F U2 L2 U2 R2 U F2 L2 B2 U2 F2 D"
+      }
+    },
+    {
+      "name": "F2L 30",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "div",
+        "x-d",
+        "x-r",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><x-f><div></div><div></div><x-f><x-f><div></div><x-f><x-f><div></div><div></div><x-r><div></div><div></div><x-d><x-r><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "R U R' U' R U R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "L F' L' F U' L' U L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U2 R' U R f R f'",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U L' U' L U L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "R U R' U' R U R'",
+      "alternate": "U2 R' U R f R f'",
+      "primary_setup": {
+        "setup": "U' R U R B R2' B' R2' U2' B' D2' F L2' F' D2' B",
+        "auf": "U'",
+        "solver_solution": "B' D2 F L2 F' D2 B U2 R2 B R2 B' R' U' R' U"
+      }
+    },
+    {
+      "name": "F2L 31",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-r",
+        "x-r",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><div></div><x-d><div></div><x-f><x-f><div></div><x-f><x-f><x-r><x-r><div></div><x-f><x-f><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U' R' F R F' R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U L F' L' F L' U L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U R' F R F' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U' L F' L' F L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U' R' F R F' R U' R'",
+      "alternate": "R' U R' F R F' R",
+      "primary_setup": {
+        "setup": "R U2' R' F2' R' F2' R F' U' F2' U F' U",
+        "auf": "U",
+        "solver_solution": "U' F U' F2 U F R' F2 R F2 R U2 R'"
+      }
+    },
+    {
+      "name": "F2L 32",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-d",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-r",
+        "x-f",
+        "div",
+        "x-f",
+        "x-r",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><div></div><x-d><div></div><x-f><x-f><div></div><x-f><x-f><x-r><x-f><div></div><x-f><x-r><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U R U' R' U R U' R' U R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U2 F U' R U R' U F'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U' R' U R U' R' U R U' R' U R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U L U' L' U L U' L' U L U' L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U R U' R' U R U' R' U R U' R'",
+      "alternate": "U' R' U R U' R' U R U' R' U R",
+      "primary_setup": {
+        "setup": "U2' R2' U2' L2' B2' L' B2' L' U2' R D2' U' L D2' L' U R",
+        "auf": "U2",
+        "solver_solution": "R' U' L D2 L' U D2 R' U2 L B2 L B2 L2 U2 R2 U2"
+      }
+    },
+    {
+      "name": "F2L 33",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-d",
+        "x-f",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><div></div><x-f><div></div><x-f><x-f><div></div><x-f><x-f><x-d><x-f><div></div><x-r><x-r><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U' R U' R' U2 R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U' L' U' L U2 L' U' L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U' R' U' R U2 R' U' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U' L U' L' U2 L U' L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U' R U' R' U2 R U' R'",
+      "alternate": "U' R' U' R U2 R' U' R",
+      "primary_setup": {
+        "setup": "R F2' L2' D2' F2' U2' R2' F2' L D2' B2' F2' U' R2' U' R2'",
+        "auf": "U'",
+        "solver_solution": "R2 U R2 U F2 B2 D2 L' F2 R2 U2 F2 D2 L2 F2 R'"
+      }
+    },
+    {
+      "name": "F2L 34",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-f",
+        "div",
+        "x-d",
+        "x-r",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><div></div><x-r><div></div><x-f><x-f><div></div><x-f><x-f><x-f><x-f><div></div><x-d><x-r><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U R U R' U2 R U R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U L' U L U2 L' U L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U R' U R U R' U2 R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U L U L' U2 L U L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U R U R' U2 R U R'",
+      "alternate": "U R' U R U R' U2 R",
+      "primary_setup": {
+        "setup": "R2' U R2' U F2' B2' D2' L' F2' R2' U2' F2' D2' L2' F2' R'",
+        "auf": "U",
+        "solver_solution": "R F2 L2 D2 F2 U2 R2 F2 L D2 B2 F2 U' R2 U' R2"
+      }
+    },
+    {
+      "name": "F2L 35",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-d",
+        "x-r",
+        "div",
+        "x-r",
+        "x-f",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><div></div><x-f><div></div><x-f><x-f><div></div><x-f><x-f><x-d><x-r><div></div><x-r><x-f><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U' R U R' U F' U' F",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U2 L F' L' F U2 L' U' L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U' f R f' U R' U' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U2 L U L' U' L f' L f",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U' R U R' U F' U' F",
+      "alternate": "U' f R f' U R' U' R",
+      "primary_setup": {
+        "setup": "R U2' R' U2' R U2' R' U' F' U2' F U'",
+        "auf": "U2",
+        "solver_solution": "U F' U2 F U R U2 R' U2 R U2 R'"
+      }
+    },
+    {
+      "name": "F2L 36",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-r",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "x-f",
+        "x-r",
+        "div",
+        "x-d",
+        "x-f",
+        "div",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><div></div><x-r><div></div><x-f><x-f><div></div><x-f><x-f><x-f><x-r><div></div><x-d><x-f><div></div><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "U F' U' F U' R U R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "U2 L' U' L F' L F L'",
+          "note": "Front Left"
+        },
+        {
+          "alg": "U2 R' U' R U f R' f'",
+          "note": "Back Right"
+        },
+        {
+          "alg": "U f' L' f U' L U L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "U F' U' F U' R U R'",
+      "alternate": "U2 R' U' R U f R' f'",
+      "primary_setup": {
+        "setup": "F' U2' F U2' F' U2' F U R U2' R' U2'",
+        "auf": "U'",
+        "solver_solution": "U2 R U2 R' U' F' U2 F U2 F' U2 F"
+      }
+    },
+    {
+      "name": "F2L 37",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-r",
+        "x-f",
+        "div",
+        "x-f",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><div></div><div></div><div></div><x-f><x-f><div></div><x-f><x-f><div></div><x-r><x-f><div></div><x-f><x-r><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "R2 U2 F R2 F' U2 R' U R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "L2 U2 F' L2 F U2 L U' L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U R r U2 R2 U' R2 U' r'",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U' L' l' U2 L2 U L2 U l",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "R2 U2 F R2 F' U2 R' U R'",
+      "alternate": "R' U R r U2 R2 U' R2 U' r'",
+      "primary_setup": {
+        "setup": "R2' U2' F R2' F' U2' F L2' B' D2' R2' B' R' D' R B2' L2' F' U'",
+        "auf": "U",
+        "solver_solution": "U F L2 B2 R' D R B R2 D2 B L2 F' U2 F R2 F' U2 R2"
+      }
+    },
+    {
+      "name": "F2L 38",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-d",
+        "div",
+        "x-r",
+        "x-f",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><div></div><div></div><div></div><x-f><x-f><div></div><x-f><x-f><div></div><x-f><x-d><div></div><x-r><x-f><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "R U' R' U' R U R' U2 R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "L' U L U' L' U2 L U' L' U L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U R U' R' U2 R U' R' U R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U L' U' L U2 L' U' L U L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "R U' R' U' R U R' U2 R U' R'",
+      "alternate": "R' U R U' R' U2 R U' R' U R",
+      "primary_setup": {
+        "setup": "R U F2' D R D' R F2' R' U2' R U2' F2' R' F2' U2' R' U2'",
+        "auf": "U2",
+        "solver_solution": "U2 R U2 F2 R F2 U2 R' U2 R F2 R' D R' D' F2 U' R'"
+      }
+    },
+    {
+      "name": "F2L 39",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-r",
+        "div",
+        "x-r",
+        "x-d",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><div></div><div></div><div></div><x-f><x-f><div></div><x-f><x-f><div></div><x-f><x-r><div></div><x-r><x-d><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "R U' R' U R U2 R' U R U' R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "L' U L U L' U' L U2 L' U L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U' R U R' U2 R U R' U' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U' L' U L U2 L' U L U' L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "R U' R' U R U2 R' U R U' R'",
+      "alternate": "R' U' R U R' U2 R U R' U' R",
+      "primary_setup": {
+        "setup": "U2' B2' D' F2' D' F2' D2' R2' U R2' B2' L' D B2' D' B2' L",
+        "auf": "U'",
+        "solver_solution": "L' B2 D B2 D' L B2 R2 U' R2 D2 F2 D F2 D B2 U2"
+      }
+    },
+    {
+      "name": "F2L 40",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-r",
+        "x-d",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><div></div><div></div><div></div><x-f><x-f><div></div><x-f><x-f><div></div><x-r><x-d><div></div><x-f><x-f><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "r U' r' U2 r U r' R U R'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "L' U L l' U l U2 l' U' l",
+          "note": "Front Left"
+        },
+        {
+          "alg": "R' U R r' U r U2 r' U' r",
+          "note": "Back Right"
+        },
+        {
+          "alg": "l U' l' U2 l U l' L U L'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "r U' r' U2 r U r' R U R'",
+      "alternate": "R' U R r' U r U2 r' U' r",
+      "primary_setup": {
+        "setup": "F2' L F2' L' U2' F2' R' F2' R2' U2' R' U' F' U F2' R' F' R",
+        "auf": "U",
+        "solver_solution": "R' F R F2 U' F U R U2 R2 F2 R F2 U2 L F2 L' F2"
+      }
+    },
+    {
+      "name": "F2L 41",
+      "visual_tokens": [
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-f",
+        "x-f",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-f",
+        "x-d",
+        "div",
+        "x-r",
+        "x-r",
+        "div",
+        "x-r",
+        "x-r"
+      ],
+      "visual_html": "<div></div><div></div><div></div><div></div><x-u><div></div><div></div><div></div><div></div><div></div><x-f><x-f><div></div><x-f><x-f><div></div><x-r><x-r><div></div><x-f><x-d><div></div><x-r><x-r><div></div><x-r><x-r>",
+      "algorithms": [
+        {
+          "alg": "R U' R' r U' r' U2 r U r'",
+          "note": "Front Right"
+        },
+        {
+          "alg": "l' U l U2 l' U' l L' U' L",
+          "note": "Front Left"
+        },
+        {
+          "alg": "r' U r U2 r' U' r R' U' R",
+          "note": "Back Right"
+        },
+        {
+          "alg": "L U' L' l U' l' U2 l U l'",
+          "note": "Back Left"
+        }
+      ],
+      "primary": "R U' R' r U' r' U2 r U r'",
+      "alternate": "r' U r U2 r' U' r R' U' R",
+      "primary_setup": {
+        "setup": "U2' F2' L2' F L2' B' U2' B U2' F U' R U2' B' R B R2'",
+        "auf": "U2",
+        "solver_solution": "R2 B' R' B U2 R' U F' U2 B' U2 B L2 F' L2 F2 U2"
+      }
+    }
+  ],
+  "oll": [
+    {
+      "name": "OLL 1",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><x-u><div></div><div></div><div></div><x-u><x-u><div></div><x-u><div></div><x-u><x-u><div></div><div></div><div></div><x-u><x-t><div></div><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "R U2 R2 F R F' U2 R' F R F'",
+          "note": "R U2 R' sledge U2 sledge"
+        },
+        {
+          "alg": "R U' R2 D' r U' r' D R2 U R'",
+          "note": ""
+        }
+      ],
+      "primary": "R U2 R2 F R F' U2 R' F R F'",
+      "alternate": "R U' R2 D' r U' r' D R2 U R'",
+      "primary_setup": {
+        "setup": "R2' B2' R' U2' R' U2' R B2' U2' R' U2' R2' B' R' B2' U2' B' R' U'",
+        "auf": "U'",
+        "solver_solution": "U R B U2 B2 R B R2 U2 R U2 B2 R' U2 R U2 R B2 R2"
+      }
+    },
+    {
+      "name": "OLL 2",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><x-u><x-u><x-t><div></div><div></div><div></div><div></div><div></div><x-u><div></div><x-u><div></div><x-u><x-u><div></div><div></div><div></div><x-u><x-t><div></div><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "(r U r') U2 (R U2 R') U2 (r U' r')",
+          "note": ""
+        },
+        {
+          "alg": "R U' R2 D' r U r' D R2 U R'",
+          "note": ""
+        },
+        {
+          "alg": "F R U R' U' S R U R' U' f'",
+          "note": ""
+        }
+      ],
+      "primary": "(r U r') U2 (R U2 R') U2 (r U' r')",
+      "alternate": "F R U R' U' S R U R' U' f'",
+      "primary_setup": {
+        "setup": "R U2' B2' R F2' R' B2' R F2' B' R' B2' U2' B' R' U'",
+        "auf": "U",
+        "solver_solution": "U R B U2 B2 R B F2 R' B2 R F2 R' B2 U2 R'"
+      }
+    },
+    {
+      "name": "OLL 3",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><div></div><x-u><div></div><div></div><x-u><x-u><div></div><x-u><div></div><x-u><x-u><div></div><div></div><div></div><div></div><x-t><div></div><x-u><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "R' F2 R2 U2 R' F R U2 R2 F2 R",
+          "note": "Inverse of OLL 4"
+        },
+        {
+          "alg": "f (R U R' U') f' U' F (R U R' U') F'",
+          "note": ""
+        },
+        {
+          "alg": "r' R2 U R' U r U2 r' U M'",
+          "note": ""
+        }
+      ],
+      "primary": "R' F2 R2 U2 R' F R U2 R2 F2 R",
+      "alternate": "r' R2 U R' U r U2 r' U M'",
+      "primary_setup": {
+        "setup": "U2' R B2' R2' U2' R B' R' U2' R2' B2' R'",
+        "auf": "U2",
+        "solver_solution": "R B2 R2 U2 R B R' U2 R2 B2 R' U2"
+      }
+    },
+    {
+      "name": "OLL 4",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><x-u><div></div><div></div><x-u><div></div><x-u><div></div><x-u><div></div><x-u><div></div><div></div><div></div><div></div><x-u><x-t><x-u><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "R' F2 R2 U2 R' F' R U2 R2 F2 R",
+          "note": "Inverse of OLL 3"
+        },
+        {
+          "alg": "f R U R' U' f' U F R U R' U' F'",
+          "note": ""
+        },
+        {
+          "alg": "M U' r U2 r' U' R U' R' M'",
+          "note": ""
+        }
+      ],
+      "primary": "R' F2 R2 U2 R' F' R U2 R2 F2 R",
+      "alternate": "M U' r U2 r' U' R U' R' M'",
+      "primary_setup": {
+        "setup": "L2' D2' B2' R B2' D2' R2' D2' L' D2' L' B' R' B2' U2' B' R' U'",
+        "auf": "U'",
+        "solver_solution": "U R B U2 B2 R B L D2 L D2 R2 D2 B2 R' B2 D2 L2"
+      }
+    },
+    {
+      "name": "OLL 5",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><x-u><div></div><x-t><div></div><div></div><div></div><div></div><x-u><x-u><div></div><x-u><x-u><div></div><x-u><div></div><x-u><x-u><div></div><x-t><div></div><div></div><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "r' U2 R U R' U r",
+          "note": "Wide sune"
+        }
+      ],
+      "primary": "r' U2 R U R' U r",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "L' U2' L F2' R' F' R F' U'",
+        "auf": "U",
+        "solver_solution": "U F R' F R F2 L' U2 L"
+      }
+    },
+    {
+      "name": "OLL 6",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><div></div><x-t><x-u><div></div><x-u><x-u><div></div><x-u><div></div><x-u><x-u><div></div><div></div><div></div><div></div><div></div><x-u><x-t><x-u><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "r U2 R' U' R U' r'",
+          "note": "Wide antisune"
+        }
+      ],
+      "primary": "r U2 R' U' R U' r'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "L U2' L' B2' R B R' B",
+        "auf": "U2",
+        "solver_solution": "B' R B' R' B2 L U2 L'"
+      }
+    },
+    {
+      "name": "OLL 7",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><div></div><div></div><x-t><div></div><div></div><x-u><div></div><x-u><div></div><x-u><x-u><div></div><x-u><div></div><x-u><div></div><div></div><div></div><x-t><div></div><x-u><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "r U R' U R U2 r'",
+          "note": "Wide sune"
+        }
+      ],
+      "primary": "r U R' U R U2 r'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "U L' B L' B' L2' F U2' F'",
+        "auf": "U'",
+        "solver_solution": "F U2 F' L2 B L B' L U'"
+      }
+    },
+    {
+      "name": "OLL 8",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><x-u><x-t><div></div><x-u><div></div><div></div><div></div><div></div><x-u><x-u><div></div><x-u><div></div><div></div><x-u><div></div><x-u><x-t><x-u><div></div><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "r' U' R U' R' U2 r",
+          "note": "Wide antisune"
+        }
+      ],
+      "primary": "r' U' R U' R' U2 r",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "U R B' R B R2' F' U2' F U2'",
+        "auf": "U",
+        "solver_solution": "U2 F' U2 F R2 B' R' B R' U'"
+      }
+    },
+    {
+      "name": "OLL 9",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><x-u><x-t><x-u><div></div><x-u><div></div><div></div><div></div><x-u><x-u><div></div><x-u><div></div><div></div><div></div><x-u><div></div><x-t><x-u><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "(R U R' U') R' F R2 U R' U' F'",
+          "note": "sexy R' F R sexy F'"
+        },
+        {
+          "alg": "R U2 R' U' S' R U' R' S",
+          "note": ""
+        },
+        {
+          "alg": "F' U' F r U' r' U r U r'",
+          "note": ""
+        }
+      ],
+      "primary": "(R U R' U') R' F R2 U R' U' F'",
+      "alternate": "F' U' F r U' r' U r U r'",
+      "primary_setup": {
+        "setup": "B' R' U' R B U' L2' F' L2' F' L2' F2' U2' F U2' F L2' F2'",
+        "auf": "U2",
+        "solver_solution": "F2 L2 F' U2 F' U2 F2 L2 F L2 F L2 U B' R' U R B"
+      }
+    },
+    {
+      "name": "OLL 10",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><x-u><div></div><x-t><div></div><div></div><div></div><x-u><div></div><div></div><x-u><x-u><div></div><x-u><x-u><div></div><x-u><div></div><div></div><x-t><div></div><div></div><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "R U R' U R' F R F' R U2 R'",
+          "note": "Sune with sledge in the middle"
+        },
+        {
+          "alg": "F U F' R' F R U' R' F' R",
+          "note": ""
+        }
+      ],
+      "primary": "R U R' U R' F R F' R U2 R'",
+      "alternate": "F U F' R' F R U' R' F' R",
+      "primary_setup": {
+        "setup": "B' U2' B' L2' B U2' R2' F' D2' F D' R' D R' B2' U' B'",
+        "auf": "U'",
+        "solver_solution": "B U B2 R D' R D F' D2 F R2 U2 B' L2 B U2 B"
+      }
+    },
+    {
+      "name": "OLL 11",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><x-u><div></div><x-t><div></div><div></div><div></div><div></div><x-u><x-u><div></div><x-u><x-u><div></div><div></div><x-u><x-u><div></div><div></div><x-t><div></div><div></div><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "S R U R' U R U2 R' U2 S'",
+          "note": "S sune U2 S'"
+        },
+        {
+          "alg": "r' R2 U R' U R U2 R' U M'",
+          "note": "M sune U M'"
+        }
+      ],
+      "primary": "S R U R' U R U2 R' U2 S'",
+      "alternate": "r' R2 U R' U R U2 R' U M'",
+      "primary_setup": {
+        "setup": "U2' B2' L2' R2' F D2' F L2' B' L2' B2' D' R' B L2' R' F2'",
+        "auf": "U",
+        "solver_solution": "F2 R L2 B' R D B2 L2 B L2 F' D2 F' R2 L2 B2 U2"
+      }
+    },
+    {
+      "name": "OLL 12",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><x-u><x-t><div></div><x-u><x-u><div></div><div></div><x-u><div></div><x-u><x-u><div></div><div></div><div></div><div></div><div></div><x-u><x-t><x-u><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "S R' U' R U' R' U2 R U2 S'",
+          "note": "S antisune U2 S'"
+        },
+        {
+          "alg": "r R2' U' R U' R' U2 R U' M",
+          "note": "M' antisune U' M"
+        },
+        {
+          "alg": "F (R U R' U') F' U F (R U R' U') F'",
+          "note": ""
+        }
+      ],
+      "primary": "S R' U' R U' R' U2 R U2 S'",
+      "alternate": "F (R U R' U') F' U F (R U R' U') F'",
+      "primary_setup": {
+        "setup": "B2' R2' B' L' B L B2' R' U2' R B2' R2' B2' U2'",
+        "auf": "U2",
+        "solver_solution": "U2 B2 R2 B2 R' U2 R B2 L' B' L B R2 B2"
+      }
+    },
+    {
+      "name": "OLL 13",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><x-u><div></div><x-t><div></div><div></div><div></div><div></div><x-u><div></div><x-u><x-u><x-u><div></div><div></div><x-u><div></div><div></div><div></div><x-t><div></div><x-u><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "F U R U' R2 F' R U R U' R'",
+          "note": "Inverse of OLL 9, F inverse sexy R' F' R inverse sexy"
+        },
+        {
+          "alg": "F U R U2 R' U' R U R' F'",
+          "note": ""
+        }
+      ],
+      "primary": "F U R U' R2 F' R U R U' R'",
+      "alternate": "F U R U2 R' U' R U R' F'",
+      "primary_setup": {
+        "setup": "B U2' B R2' F' L2' F R2' B2' F' L2' F U B' R' U R B U'",
+        "auf": "U'",
+        "solver_solution": "U B' R' U' R B U' F' L2 F B2 R2 F' L2 F R2 B' U2 B'"
+      }
+    },
+    {
+      "name": "OLL 14",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><x-u><x-t><x-u><div></div><div></div><div></div><div></div><div></div><x-u><x-u><x-u><div></div><div></div><div></div><div></div><x-u><div></div><x-t><x-u><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "(R' F R) U (R' F' R) (F U' F')",
+          "note": ""
+        }
+      ],
+      "primary": "(R' F R) U (R' F' R) (F U' F')",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "F' L' U' B' U' B2' L' B D2' F B' D2' L2' B' L2' F' L2'",
+        "auf": "U",
+        "solver_solution": "L2 F L2 B L2 D2 B F' D2 B' L B2 U B U L F"
+      }
+    },
+    {
+      "name": "OLL 15",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><div></div><x-u><div></div><div></div><x-u><div></div><x-u><x-u><x-u><div></div><x-u><div></div><div></div><div></div><div></div><x-t><div></div><x-u><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "l' U' l L' U' L U l' U l",
+          "note": ""
+        }
+      ],
+      "primary": "l' U' l L' U' L U l' U l",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "U2' L U2' L B2' L B2' L2' U2' R' F' L2' U' L U' F R",
+        "auf": "U2",
+        "solver_solution": "R' F' U L' U L2 F R U2 L2 B2 L' B2 L' U2 L' U2"
+      }
+    },
+    {
+      "name": "OLL 16",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><x-u><div></div><div></div><x-u><div></div><div></div><x-u><x-u><x-u><div></div><div></div><div></div><div></div><div></div><x-u><x-t><x-u><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "r U r' R U R' U' r U' r'",
+          "note": ""
+        }
+      ],
+      "primary": "r U r' R U R' U' r U' r'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "L F R' F R F2' L U' F2' R2' B2' D B2' R2' F2' U2' L2' U'",
+        "auf": "U'",
+        "solver_solution": "U L2 U2 F2 R2 B2 D' B2 R2 F2 U L' F2 R' F' R F' L'"
+      }
+    },
+    {
+      "name": "OLL 17",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><div></div><x-u><div></div><div></div><x-u><x-u><div></div><x-u><div></div><x-u><div></div><div></div><div></div><x-u><div></div><x-t><x-u><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "F R' F' R U S' R U' R' S",
+          "note": "Hedge inverse sexy with S moves inserted"
+        },
+        {
+          "alg": "F R' F' R2 r' U R U' R' U' M'",
+          "note": "Hedge inverse sexy with M moves inserted"
+        },
+        {
+          "alg": "(R U R' U) (R' F R F') U2 (R' F R F')",
+          "note": ""
+        },
+        {
+          "alg": "F' r U r' U' S r' F r S'",
+          "note": ""
+        }
+      ],
+      "primary": "F R' F' R U S' R U' R' S",
+      "alternate": "(R U R' U) (R' F R F') U2 (R' F R F')",
+      "primary_setup": {
+        "setup": "U2' R2' B2' R2' U2' B U2' B2' F R2' B' R F2' U2' F R B",
+        "auf": "U",
+        "solver_solution": "B' R' F' U2 F2 R' B R2 F' B2 U2 B' U2 R2 B2 R2 U2"
+      }
+    },
+    {
+      "name": "OLL 18",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><x-u><div></div><div></div><x-u><div></div><x-u><div></div><x-u><div></div><x-u><x-u><div></div><div></div><x-u><div></div><x-t><div></div><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "R U2 R2 F R F' U2 M' U R U' r'",
+          "note": ""
+        },
+        {
+          "alg": "r U R' U R U2 r2 U' R U' R' U2 r",
+          "note": "Wide sune, wide antisune"
+        }
+      ],
+      "primary": "R U2 R2 F R F' U2 M' U R U' r'",
+      "alternate": "r U R' U R U2 r2 U' R U' R' U2 r",
+      "primary_setup": {
+        "setup": "U2' R2' D2' F2' R U2' L U2' R' D2' R' B' R' U2' B R B R'",
+        "auf": "U2",
+        "solver_solution": "R B' R' B' U2 R B R D2 R U2 L' U2 R' F2 D2 R2 U2"
+      }
+    },
+    {
+      "name": "OLL 19",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><x-u><div></div><x-t><div></div><div></div><div></div><x-u><div></div><x-u><div></div><x-u><div></div><x-u><div></div><div></div><div></div><x-u><div></div><x-t><x-u><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "S' R U R' S U' R' F R F'",
+          "note": "Sexy sledge with S moves inserted"
+        },
+        {
+          "alg": "R' U2 F R U R' U' F2 U2 F R",
+          "note": ""
+        },
+        {
+          "alg": "r U2 R' U' R U' r2 U2 R U R' U r",
+          "note": "Wide antisune, wide sune"
+        }
+      ],
+      "primary": "S' R U R' S U' R' F R F'",
+      "alternate": "r U2 R' U' R U' r2 U2 R U R' U r",
+      "primary_setup": {
+        "setup": "R' D2' F2' D2' L' D2' L D2' R' D2' R F L' D2' R2' B' R'",
+        "auf": "U'",
+        "solver_solution": "R B R2 D2 L F' R' D2 R D2 L' D2 L D2 F2 D2 R"
+      }
+    },
+    {
+      "name": "OLL 20",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><div></div><x-u><div></div><x-u><div></div><x-u><div></div><x-u><div></div><x-u><div></div><x-u><div></div><x-u><div></div><x-t><div></div><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "S R' U' R U R U R U' R' S'",
+          "note": ""
+        },
+        {
+          "alg": "r U R' U' M2 U R U' R' U' M'",
+          "note": ""
+        }
+      ],
+      "primary": "S R' U' R U R U R U' R' S'",
+      "alternate": "r U R' U' M2 U R U' R' U' M'",
+      "primary_setup": {
+        "setup": "D2' B2' R2' F2' L2' D L2' F2' R2' U2' L' R B' D2' F2' L R'",
+        "auf": "U",
+        "solver_solution": "R L' F2 D2 B R' L U2 R2 F2 L2 D' L2 F2 R2 B2 D2"
+      }
+    },
+    {
+      "name": "OLL 21",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><div></div><x-t><x-u><div></div><x-u><div></div><x-u><div></div><x-u><x-u><x-u><div></div><x-u><div></div><x-u><div></div><x-u><x-t><div></div><div></div><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "R U R' U R U' R' U R U2 R'",
+          "note": "Double sune"
+        },
+        {
+          "alg": "R U2 R' U' R U R' U' R U' R'",
+          "note": "Double antisune"
+        },
+        {
+          "alg": "F (R U R' U') (R U R' U') (R U R' U') F'",
+          "note": "F triple sexy F'"
+        }
+      ],
+      "primary": "R U R' U R U' R' U R U2 R'",
+      "alternate": "F (R U R' U') (R U R' U') (R U R' U') F'",
+      "primary_setup": {
+        "setup": "U2' R' U2' L F2' R F2' R F2' L' F2' R2' U' F2' R2' F2' U' R2' U'",
+        "auf": "U2",
+        "solver_solution": "U R2 U F2 R2 F2 U R2 F2 L F2 R' F2 R' F2 L' U2 R U2"
+      }
+    },
+    {
+      "name": "OLL 22",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><x-u><x-t><x-u><div></div><x-u><div></div><div></div><div></div><x-u><x-u><x-u><div></div><x-u><div></div><x-u><div></div><div></div><x-t><div></div><div></div><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "R U2 R2 U' R2 U' R2 U2 R",
+          "note": ""
+        }
+      ],
+      "primary": "R U2 R2 U' R2 U' R2 U2 R",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "U2' R B2' R B2' R' B2' R' U2' R U' B2' U' B2' R' U'",
+        "auf": "U'",
+        "solver_solution": "U R B2 U B2 U R' U2 R B2 R B2 R' B2 R' U2"
+      }
+    },
+    {
+      "name": "OLL 23",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><div></div><x-t><div></div><x-u><x-u><x-u><div></div><div></div><x-u><x-u><x-u><div></div><div></div><div></div><x-u><div></div><div></div><x-t><x-u><div></div><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "R2 D R' U2 R D' R' U2 R'",
+          "note": ""
+        }
+      ],
+      "primary": "R2 D R' U2 R D' R' U2 R'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "L D R2' D' L R2' D' L2' U F2' U' L2' D L2' U F2'",
+        "auf": "U",
+        "solver_solution": "F2 U' L2 D' L2 U F2 U' L2 D R2 L' D R2 D' L'"
+      }
+    },
+    {
+      "name": "OLL 24",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><div></div><div></div><x-t><div></div><div></div><x-u><x-u><div></div><div></div><x-u><x-u><x-u><div></div><div></div><div></div><x-u><x-u><div></div><x-t><x-u><div></div><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "r U R' U' r' F R F'",
+          "note": ""
+        }
+      ],
+      "primary": "r U R' U' r' F R F'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "B2' L D2' L' B2' U2' B' R F2' R' B",
+        "auf": "U2",
+        "solver_solution": "B' R F2 R' B U2 B2 L D2 L' B2"
+      }
+    },
+    {
+      "name": "OLL 25",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><div></div><x-t><x-u><div></div><x-u><x-u><div></div><div></div><x-u><x-u><x-u><div></div><div></div><x-u><x-u><div></div><div></div><x-t><div></div><div></div><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "F' r U R' U' r' F R",
+          "note": ""
+        }
+      ],
+      "primary": "F' r U R' U' r' F R",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "D U2' F2' L2' U R2' D' B2' L' D R2' D' L'",
+        "auf": "U'",
+        "solver_solution": "L D R2 D' L B2 D R2 U' L2 F2 U2 D'"
+      }
+    },
+    {
+      "name": "OLL 26",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><div></div><x-t><x-u><div></div><x-u><x-u><div></div><div></div><x-u><x-u><x-u><div></div><div></div><div></div><x-u><div></div><x-u><x-t><x-u><div></div><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "R U2 R' U' R U' R'",
+          "note": ""
+        }
+      ],
+      "primary": "R U2 R' U' R U' R'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "F' U' F U R2' B' R2' B' D2' L2' F L2' D2' B2'",
+        "auf": "U",
+        "solver_solution": "B2 D2 L2 F' L2 D2 B R2 B R2 U' F' U F"
+      }
+    },
+    {
+      "name": "OLL 27",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><div></div><div></div><x-t><div></div><div></div><x-u><div></div><x-u><div></div><x-u><x-u><x-u><div></div><div></div><x-u><x-u><div></div><div></div><x-t><div></div><div></div><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "R U R' U R U2 R'",
+          "note": ""
+        }
+      ],
+      "primary": "R U R' U R U2 R'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "U2' L U2' L' U' L U' L'",
+        "auf": "U2",
+        "solver_solution": "L U L' U L U2 L' U2"
+      }
+    },
+    {
+      "name": "OLL 28",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><div></div><x-t><div></div><x-u><x-u><x-u><div></div><div></div><x-u><x-u><div></div><x-u><div></div><x-u><div></div><x-u><div></div><x-t><div></div><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "R' F R S R' F' R S'",
+          "note": "Inverse of OLL 57, Can be written as commutator [R' F R, S]"
+        },
+        {
+          "alg": "M' U' M U2 M' U' M",
+          "note": ""
+        },
+        {
+          "alg": "r U R' U' M U R U' R'",
+          "note": ""
+        }
+      ],
+      "primary": "R' F R S R' F' R S'",
+      "alternate": "r U R' U' M U R U' R'",
+      "primary_setup": {
+        "setup": "D' R2' U R2' B2' D L2' U' L2' B2' U' B2' R' F' L U2' L' F R",
+        "auf": "U'",
+        "solver_solution": "R' F' L U2 L' F R B2 U B2 L2 U L2 D' B2 R2 U' R2 D"
+      }
+    },
+    {
+      "name": "OLL 29",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><div></div><x-u><div></div><x-u><div></div><div></div><x-u><x-u><div></div><x-u><x-u><div></div><x-u><div></div><x-u><x-t><div></div><div></div><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "r2 D' r U r' D r2 U' r' U' r",
+          "note": ""
+        }
+      ],
+      "primary": "r2 D' r U r' D r2 U' r' U' r",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "U L F U F' U R' B2' D2' F2' L' D2' B2' L D2' R D2' L2'",
+        "auf": "U",
+        "solver_solution": "L2 D2 R' D2 L' B2 D2 L F2 D2 B2 R U' F U' F' L' U'"
+      }
+    },
+    {
+      "name": "OLL 30",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><x-u><x-t><div></div><x-u><x-u><div></div><div></div><x-u><div></div><x-u><x-u><div></div><div></div><x-u><div></div><div></div><div></div><x-t><div></div><x-u><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "r' D' r U' r' D r2 U' r' U r U r'",
+          "note": ""
+        },
+        {
+          "alg": "F R' F R2 U' R' U' R U R' F2",
+          "note": ""
+        },
+        {
+          "alg": "F U R U2 R' U' R U2 R' U' F'",
+          "note": ""
+        }
+      ],
+      "primary": "r' D' r U' r' D r2 U' r' U r U r'",
+      "alternate": "F U R U2 R' U' R U2 R' U' F'",
+      "primary_setup": {
+        "setup": "U' L' B' U' B U' R F2' D2' B2' L D2' F2' L' D2' R' D2' L2'",
+        "auf": "U2",
+        "solver_solution": "L2 D2 R D2 L F2 D2 L' B2 D2 F2 R' U B' U B L U"
+      }
+    },
+    {
+      "name": "OLL 31",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><div></div><div></div><x-t><div></div><div></div><x-u><x-u><div></div><x-u><div></div><x-u><x-u><div></div><div></div><div></div><div></div><x-u><div></div><x-t><x-u><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "R' U' F U R U' R' F' R",
+          "note": "R' U' (OLL 44) R"
+        }
+      ],
+      "primary": "R' U' F U R U' R' F' R",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "F R U R' U F U2' F' U2' B' U2' B L2' F' L2'",
+        "auf": "U'",
+        "solver_solution": "L2 F L2 B' U2 B U2 F U2 F' U' R U' R' F'"
+      }
+    },
+    {
+      "name": "OLL 32",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><x-u><div></div><x-t><div></div><div></div><div></div><x-u><div></div><x-u><div></div><x-u><x-u><div></div><div></div><div></div><x-u><x-u><div></div><x-t><x-u><div></div><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "S R U R' U' R' F R f'",
+          "note": "S sexy sledge S'"
+        },
+        {
+          "alg": "L U F' U' L' U L F L'",
+          "note": ""
+        }
+      ],
+      "primary": "S R U R' U' R' F R f'",
+      "alternate": "L U F' U' L' U L F L'",
+      "primary_setup": {
+        "setup": "U R2' U F2' L2' B2' U' L2' F2' D' R2' U' B' R D R' D' B R2'",
+        "auf": "U",
+        "solver_solution": "R2 B' D R D' R' B U R2 D F2 L2 U B2 L2 F2 U' R2 U'"
+      }
+    },
+    {
+      "name": "OLL 33",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><x-u><div></div><x-t><div></div><div></div><div></div><x-u><div></div><div></div><x-u><x-u><x-u><div></div><div></div><div></div><div></div><x-u><div></div><x-t><x-u><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "(R U R' U') (R' F R F')",
+          "note": ""
+        }
+      ],
+      "primary": "(R U R' U') (R' F R F')",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "R F R2' F' R U R2' U' R2' U2'",
+        "auf": "U2",
+        "solver_solution": "U2 R2 U R2 U' R' F R2 F' R'"
+      }
+    },
+    {
+      "name": "OLL 34",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><div></div><div></div><x-t><div></div><div></div><x-u><x-u><div></div><x-u><div></div><x-u><div></div><x-u><div></div><div></div><x-u><x-u><div></div><x-t><x-u><div></div><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "f R f' U' r' U' R U M'",
+          "note": ""
+        },
+        {
+          "alg": "R U R2 U' R' F R U R U' F'",
+          "note": ""
+        },
+        {
+          "alg": "F R U R' U' R' F' r U R U' r'",
+          "note": ""
+        }
+      ],
+      "primary": "f R f' U' r' U' R U M'",
+      "alternate": "F R U R' U' R' F' r U R U' r'",
+      "primary_setup": {
+        "setup": "R' B' R2' B R B2' R2' U B2' U' R2' B2' U'",
+        "auf": "U'",
+        "solver_solution": "U B2 R2 U B2 U' R2 B2 R' B' R2 B R"
+      }
+    },
+    {
+      "name": "OLL 35",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><div></div><x-u><div></div><div></div><x-u><x-u><div></div><x-u><x-u><div></div><div></div><div></div><x-u><x-u><div></div><x-t><x-u><div></div><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "R U2 R2 F R F' R U2 R'",
+          "note": "R U2 R' sledge R U2 R'"
+        }
+      ],
+      "primary": "R U2 R2 F R F' R U2 R'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "L2' F R2' D2' B D2' L2' F L2' F' R2' F R' F R F2' L2' U'",
+        "auf": "U",
+        "solver_solution": "U L2 F2 R' F' R F' R2 F L2 F' L2 D2 B' D2 R2 F' L2"
+      }
+    },
+    {
+      "name": "OLL 36",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><x-u><x-t><div></div><x-u><x-u><div></div><div></div><x-u><div></div><x-u><x-u><div></div><x-u><div></div><div></div><x-u><div></div><x-t><div></div><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "R U R' F' R U R' U' R' F R U' R' F R F'",
+          "note": ""
+        },
+        {
+          "alg": "R' F' U' F2 U R U' R' F' R",
+          "note": ""
+        },
+        {
+          "alg": "R U R2 F' U' F U R2 U2 R'",
+          "note": ""
+        }
+      ],
+      "primary": "R U R' F' R U R' U' R' F R U' R' F R F'",
+      "alternate": "R U R2 F' U' F U R2 U2 R'",
+      "primary_setup": {
+        "setup": "R F R2' F' R U2' R2' U B2' U R2' U2' R2' U' B2' U R2'",
+        "auf": "U2",
+        "solver_solution": "R2 U' B2 U R2 U2 R2 U' B2 U' R2 U2 R' F R2 F' R'"
+      }
+    },
+    {
+      "name": "OLL 37",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><div></div><x-t><div></div><x-u><x-u><div></div><x-u><div></div><x-u><x-u><div></div><x-u><div></div><div></div><div></div><x-u><div></div><x-t><x-u><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "F R U' R' U' R U R' F'",
+          "note": ""
+        },
+        {
+          "alg": "F R' F' R U R U' R'",
+          "note": ""
+        }
+      ],
+      "primary": "F R U' R' U' R U R' F'",
+      "alternate": "F R' F' R U R U' R'",
+      "primary_setup": {
+        "setup": "R2' U' R2' U R B' R2' B R",
+        "auf": "U'",
+        "solver_solution": "R' B' R2 B R' U' R2 U R2"
+      }
+    },
+    {
+      "name": "OLL 38",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><div></div><div></div><x-t><div></div><div></div><x-u><x-u><div></div><div></div><x-u><x-u><div></div><x-u><div></div><x-u><div></div><div></div><x-u><x-t><div></div><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "R U R' U R U' R' U' R' F R F'",
+          "note": ""
+        },
+        {
+          "alg": "F R U' R' S U' R U R' f'",
+          "note": ""
+        }
+      ],
+      "primary": "R U R' U R U' R' U' R' F R F'",
+      "alternate": "F R U' R' S U' R U R' f'",
+      "primary_setup": {
+        "setup": "U2' F2' R2' U' F2' U R2' U' R2' U R2' U L F L' F2' R' F' R'",
+        "auf": "U",
+        "solver_solution": "R F R F2 L F' L' U' R2 U' R2 U R2 U' F2 U R2 F2 U2"
+      }
+    },
+    {
+      "name": "OLL 39",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><x-u><div></div><div></div><x-u><div></div><div></div><x-u><x-u><x-u><div></div><div></div><x-u><div></div><div></div><div></div><x-t><div></div><x-u><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "f' r U r' U' r' F r S",
+          "note": ""
+        },
+        {
+          "alg": "L F' L' U' L U F U' L'",
+          "note": ""
+        },
+        {
+          "alg": "R U R' F' U' F U R U2 R'",
+          "note": ""
+        }
+      ],
+      "primary": "f' r U r' U' r' F r S",
+      "alternate": "R U R' F' U' F U R U2 R'",
+      "primary_setup": {
+        "setup": "B2' R D' B' D B R' U' B2' D' L2' F2' U' R2' F2' L2' U B2' U2'",
+        "auf": "U2",
+        "solver_solution": "U2 B2 U' L2 F2 R2 U F2 L2 D B2 U R B' D' B D R' B2"
+      }
+    },
+    {
+      "name": "OLL 40",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><x-u><x-t><div></div><x-u><div></div><div></div><div></div><div></div><x-u><x-u><x-u><div></div><x-u><div></div><div></div><x-u><div></div><x-t><div></div><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "R' F R U R' U' F' U R",
+          "note": ""
+        },
+        {
+          "alg": "f R' F' R U R U' R' S'",
+          "note": ""
+        }
+      ],
+      "primary": "R' F R U R' U' F' U R",
+      "alternate": "f R' F' R U R U' R' S'",
+      "primary_setup": {
+        "setup": "U2' F2' R F2' L' U2' L U2' R U2' R' U' B U' B' R'",
+        "auf": "U'",
+        "solver_solution": "R B U B' U R U2 R' U2 L' U2 L F2 R' F2 U2"
+      }
+    },
+    {
+      "name": "OLL 41",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "div",
+        "x-u",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><div></div><x-u><x-t><div></div><div></div><x-u><div></div><div></div><div></div><x-u><x-u><div></div><x-u><div></div><x-u><div></div><x-u><div></div><x-t><div></div><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "R U R' U R U2 R' F R U R' U' F'",
+          "note": "Sune F sexy F'"
+        },
+        {
+          "alg": "F U R2 D R' U' R D' R2 F'",
+          "note": ""
+        }
+      ],
+      "primary": "R U R' U R U2 R' F R U R' U' F'",
+      "alternate": "F U R2 D R' U' R D' R2 F'",
+      "primary_setup": {
+        "setup": "R' U' F' U F R U R2' U F2' L2' B2' D' B2' L2' F2' U2' R2'",
+        "auf": "U",
+        "solver_solution": "R2 U2 F2 L2 B2 D B2 L2 F2 U' R2 U' R' F' U' F U R"
+      }
+    },
+    {
+      "name": "OLL 42",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><div></div><x-u><div></div><x-u><div></div><div></div><x-u><x-u><div></div><x-u><div></div><div></div><x-u><div></div><div></div><x-t><x-u><div></div><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "R' U' R U' R' U2 R F R U R' U' F'",
+          "note": "Antisune F sexy F'"
+        }
+      ],
+      "primary": "R' U' R U' R' U2 R F R U R' U' F'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "U' B2' F2' R2' B2' U B2' U' R2' U B2' U L F' U2' F' U2' F L' F2'",
+        "auf": "U2",
+        "solver_solution": "F2 L F' U2 F U2 F L' U' B2 U' R2 U B2 U' B2 R2 F2 B2 U"
+      }
+    },
+    {
+      "name": "OLL 43",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><div></div><x-t><div></div><x-u><x-u><x-u><div></div><div></div><x-u><x-u><div></div><x-u><div></div><div></div><div></div><div></div><div></div><x-t><x-u><x-u><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "R' U' F' U F R",
+          "note": ""
+        },
+        {
+          "alg": "F' U' L' U L F",
+          "note": ""
+        }
+      ],
+      "primary": "R' U' F' U F R",
+      "alternate": "F' U' L' U L F",
+      "primary_setup": {
+        "setup": "U' B' R' U' R U B",
+        "auf": "U'",
+        "solver_solution": "B' U' R' U R B U"
+      }
+    },
+    {
+      "name": "OLL 44",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><div></div><x-t><div></div><x-u><x-u><div></div><x-u><div></div><x-u><x-u><div></div><x-u><div></div><x-u><div></div><div></div><x-u><x-t><div></div><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "F U R U' R' F'",
+          "note": ""
+        }
+      ],
+      "primary": "F U R U' R' F'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "U L F U F' U' L'",
+        "auf": "U",
+        "solver_solution": "L U F U' F' L' U'"
+      }
+    },
+    {
+      "name": "OLL 45",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><x-u><div></div><div></div><x-u><div></div><div></div><x-u><x-u><x-u><div></div><x-u><div></div><div></div><x-u><div></div><x-t><div></div><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "F R U R' U' F'",
+          "note": ""
+        }
+      ],
+      "primary": "F R U R' U' F'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "U2' B U L U' L' B'",
+        "auf": "U2",
+        "solver_solution": "B L U L' U' B' U2"
+      }
+    },
+    {
+      "name": "OLL 46",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><div></div><x-t><div></div><x-u><x-u><div></div><x-u><x-u><div></div><x-u><div></div><x-u><div></div><x-u><x-u><div></div><x-u><x-t><div></div><div></div><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "R' U' R' F R F' U R",
+          "note": ""
+        }
+      ],
+      "primary": "R' U' R' F R F' U R",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "F' U' L' U L F' U R2' U B2' L2' F2' D L2' B2' U' F2' U'",
+        "auf": "U'",
+        "solver_solution": "U F2 U B2 L2 D' F2 L2 B2 U' R2 U' F L' U' L U F"
+      }
+    },
+    {
+      "name": "OLL 47",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><div></div><div></div><x-t><div></div><div></div><x-u><div></div><x-u><x-u><div></div><x-u><x-u><div></div><div></div><div></div><div></div><div></div><x-u><x-t><x-u><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "F' (L' U' L U) (L' U' L U) F",
+          "note": ""
+        }
+      ],
+      "primary": "F' (L' U' L U) (L' U' L U) F",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "L F2' R2' D2' R D2' L' F2' R2' U2' R' B' R' U' R U B U'",
+        "auf": "U",
+        "solver_solution": "U B' U' R' U R B R U2 R2 F2 L D2 R' D2 R2 F2 L'"
+      }
+    },
+    {
+      "name": "OLL 48",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><x-u><x-t><x-u><div></div><x-u><div></div><div></div><div></div><x-u><x-u><div></div><x-u><x-u><div></div><div></div><div></div><div></div><x-t><div></div><x-u><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "F (R U R' U') (R U R' U') F'",
+          "note": ""
+        }
+      ],
+      "primary": "F (R U R' U') (R U R' U') F'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "B2' L' D2' L' R2' F2' D2' F2' R' F2' L2' R' B' L U L' U' B'",
+        "auf": "U2",
+        "solver_solution": "B U L U' L' B R L2 F2 R F2 D2 F2 R2 L D2 L B2"
+      }
+    },
+    {
+      "name": "OLL 49",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><x-u><x-t><x-u><div></div><x-u><div></div><div></div><x-u><div></div><x-u><x-u><div></div><x-u><div></div><div></div><div></div><div></div><x-t><div></div><x-u><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "r U' r2 U r2 U r2 U' r",
+          "note": ""
+        }
+      ],
+      "primary": "r U' r2 U r2 U r2 U' r",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "F U2' F' U2' F' L2' F' R2' F L' F' R2' F2' L' U'",
+        "auf": "U'",
+        "solver_solution": "U L F2 R2 F L F' R2 F L2 F U2 F U2 F'"
+      }
+    },
+    {
+      "name": "OLL 50",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><x-u><x-t><x-u><div></div><div></div><div></div><div></div><x-u><div></div><x-u><x-u><div></div><x-u><div></div><x-u><div></div><div></div><x-t><div></div><div></div><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "r' U r2 U' r2 U' r2 U r'",
+          "note": ""
+        }
+      ],
+      "primary": "r' U r2 U' r2 U' r2 U r'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "R2' D2' L2' D2' B2' R2' F L2' F2' L2' R' F' R2' B2' R' U'",
+        "auf": "U",
+        "solver_solution": "U R B2 R2 F R L2 F2 L2 F' R2 B2 D2 L2 D2 R2"
+      }
+    },
+    {
+      "name": "OLL 51",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><x-u><div></div><x-t><div></div><div></div><div></div><div></div><x-u><div></div><x-u><x-u><x-u><div></div><div></div><div></div><div></div><div></div><x-u><x-t><x-u><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "F (U R U' R') (U R U' R') F'",
+          "note": ""
+        }
+      ],
+      "primary": "F (U R U' R') (U R U' R') F'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "B2' L' D2' L' R2' F2' D2' F2' R' F2' L2' R' B' U L U' L' B'",
+        "auf": "U2",
+        "solver_solution": "B L U L' U' B R L2 F2 R F2 D2 F2 R2 L D2 L B2"
+      }
+    },
+    {
+      "name": "OLL 52",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><x-u><x-t><x-u><div></div><x-u><div></div><div></div><x-u><div></div><x-u><div></div><x-u><x-u><div></div><x-u><div></div><div></div><x-t><div></div><div></div><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "R' F' U' F U' R U R' U R",
+          "note": ""
+        }
+      ],
+      "primary": "R' F' U' F U' R U R' U R",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "L2' F2' U F2' L2' D' U' F2' D R2' U' R2' B L' D' L D2' F2' D' B'",
+        "auf": "U'",
+        "solver_solution": "B D F2 D2 L' D L B' R2 U R2 D' F2 U D L2 F2 U' F2 L2"
+      }
+    },
+    {
+      "name": "OLL 53",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><x-u><div></div><div></div><div></div><x-u><x-u><div></div><x-u><x-u><div></div><x-u><div></div><x-u><div></div><x-u><x-t><div></div><div></div><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "r' U' R U' R' U R U' R' U2 r",
+          "note": "Double wide antisune"
+        }
+      ],
+      "primary": "r' U' R U' R' U R U' R' U2 r",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "R' U2' R U2' R U B' U' R2' U R B",
+        "auf": "U",
+        "solver_solution": "B' R' U' R2 U B U' R' U2 R' U2 R"
+      }
+    },
+    {
+      "name": "OLL 54",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><div></div><x-t><x-u><div></div><x-u><div></div><x-u><x-u><div></div><x-u><x-u><div></div><x-u><div></div><div></div><div></div><x-u><x-t><div></div><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "r U R' U R U' R' U R U2 r'",
+          "note": "Double wide sune"
+        }
+      ],
+      "primary": "r U R' U R U' R' U R U2 r'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "U2' R' F2' D2' L' D2' F2' R U2' R B R B' R' U2' B' R'",
+        "auf": "U2",
+        "solver_solution": "R B U2 R B R' B' R' U2 R' F2 D2 L D2 F2 R U2"
+      }
+    },
+    {
+      "name": "OLL 55",
+      "visual_tokens": [
+        "x-t",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-u><x-u><x-u><x-t><div></div><div></div><div></div><div></div><div></div><div></div><x-u><x-u><x-u><div></div><div></div><div></div><div></div><div></div><div></div><x-t><x-u><x-u><x-u><x-t>",
+      "algorithms": [
+        {
+          "alg": "R' F U R U' R2 F' R2 U R' U' R",
+          "note": ""
+        },
+        {
+          "alg": "R U2 R2 U' R U' R' U2 F R F'",
+          "note": ""
+        },
+        {
+          "alg": "R' F R U R U' R2 F' R2 U' R' U R U R'",
+          "note": ""
+        },
+        {
+          "alg": "F U' R2 D R' U2 R D' R2 U F'",
+          "note": ""
+        }
+      ],
+      "primary": "R' F U R U' R2 F' R2 U R' U' R",
+      "alternate": "R' F R U R U' R2 F' R2 U' R' U R U R'",
+      "primary_setup": {
+        "setup": "U2' F U2' F' U2' F' L2' F L2' U B' R' U R B U'",
+        "auf": "U'",
+        "solver_solution": "U B' R' U' R B U' L2 F' L2 F U2 F U2 F' U2"
+      }
+    },
+    {
+      "name": "OLL 56",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "div",
+        "div",
+        "x-u",
+        "x-t",
+        "div",
+        "x-u",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><x-u><div></div><x-t><x-u><div></div><div></div><div></div><x-u><div></div><x-u><x-u><x-u><div></div><x-u><div></div><div></div><div></div><x-u><x-t><div></div><x-u><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "r U r' U R U' R' U R U' R' r U' r'",
+          "note": ""
+        },
+        {
+          "alg": "F R U R' U' R F' r U R' U' r'",
+          "note": ""
+        }
+      ],
+      "primary": "r U r' U R U' R' U R U' R' r U' r'",
+      "alternate": "F R U R' U' R F' r U R' U' r'",
+      "primary_setup": {
+        "setup": "R U' F2' U' F2' U' B2' D2' F2' U B2' U' L2' B L2' F' D2' F' U' R'",
+        "auf": "U",
+        "solver_solution": "R U F D2 F L2 B' L2 U B2 U' F2 D2 B2 U F2 U F2 U R'"
+      }
+    },
+    {
+      "name": "OLL 57",
+      "visual_tokens": [
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "div",
+        "x-u",
+        "x-u",
+        "x-u",
+        "div",
+        "x-t",
+        "div",
+        "div",
+        "div",
+        "x-t"
+      ],
+      "visual_html": "<x-t><div></div><div></div><div></div><x-t><div></div><x-u><x-u><x-u><div></div><x-u><div></div><x-u><div></div><x-u><div></div><x-u><x-u><x-u><div></div><x-t><div></div><div></div><div></div><x-t>",
+      "algorithms": [
+        {
+          "alg": "S R' F R S' R' F' R",
+          "note": "Inverse of OLL 28, Can be written as commutator [S, R' F R]"
+        },
+        {
+          "alg": "R U R' U' M' U R U' r'",
+          "note": ""
+        }
+      ],
+      "primary": "S R' F R S' R' F' R",
+      "alternate": "R U R' U' M' U R U' r'",
+      "primary_setup": {
+        "setup": "R L F R2' F R L F2' R2' D F2' D2' R2' F2' R2' D L2' U2'",
+        "auf": "U2",
+        "solver_solution": "U2 L2 D' R2 F2 R2 D2 F2 D' R2 F2 L' R' F' R2 F' L' R'"
+      }
+    }
+  ],
+  "pll": [
+    {
+      "name": "Aa perm",
+      "visual_tokens": [
+        "x-t",
+        "x-r",
+        "x-b",
+        "x-r",
+        "x-t",
+        "x-b",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-f",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-l",
+        "x-t",
+        "x-f",
+        "x-f",
+        "x-b",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-r><x-b><x-r><x-t><x-b><x-u><x-u><x-u><x-f><x-l><x-u><x-u><x-u><x-r><x-l><x-u><x-u><x-u><x-l><x-t><x-f><x-f><x-b><x-t>",
+      "algorithms": [
+        {
+          "alg": "x (R' U R') D2 (R U' R') D2 R2 x'",
+          "note": "Inverse of Ab perm"
+        }
+      ],
+      "primary": "x (R' U R') D2 (R U' R') D2 R2 x'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "R2' U' F2' U B2' U' F2' U B2' R2' U'",
+        "auf": "U'",
+        "solver_solution": "U R2 B2 U' F2 U B2 U' F2 U R2"
+      }
+    },
+    {
+      "name": "Ab perm",
+      "visual_tokens": [
+        "x-t",
+        "x-f",
+        "x-b",
+        "x-l",
+        "x-t",
+        "x-r",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-t",
+        "x-f",
+        "x-f",
+        "x-r",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-f><x-b><x-l><x-t><x-r><x-u><x-u><x-u><x-b><x-l><x-u><x-u><x-u><x-r><x-l><x-u><x-u><x-u><x-b><x-t><x-f><x-f><x-r><x-t>",
+      "algorithms": [
+        {
+          "alg": "x R2' D2 (R U R') D2 (R U' R) x'",
+          "note": "Inverse of Aa perm"
+        }
+      ],
+      "primary": "x R2' D2 (R U R') D2 (R U' R) x'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "R2' B2' U' F2' U B2' U' F2' U R2' U",
+        "auf": "U",
+        "solver_solution": "U' R2 U' F2 U B2 U' F2 U B2 R2"
+      }
+    },
+    {
+      "name": "F perm",
+      "visual_tokens": [
+        "x-t",
+        "x-b",
+        "x-f",
+        "x-r",
+        "x-t",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-f",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-t",
+        "x-f",
+        "x-b",
+        "x-r",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-b><x-f><x-r><x-t><x-l><x-u><x-u><x-u><x-f><x-l><x-u><x-u><x-u><x-r><x-l><x-u><x-u><x-u><x-b><x-t><x-f><x-b><x-r><x-t>",
+      "algorithms": [
+        {
+          "alg": "R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R",
+          "note": "R' U' F' (T perm) F U R"
+        }
+      ],
+      "primary": "R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "R2' U' R2' U' R2' U2' B2' U R2' U' R2' U' B' F' U2' B' F",
+        "auf": "U2",
+        "solver_solution": "F' B U2 F B U R2 U R2 U' B2 U2 R2 U R2 U R2"
+      }
+    },
+    {
+      "name": "Ja perm",
+      "visual_tokens": [
+        "x-t",
+        "x-b",
+        "x-r",
+        "x-r",
+        "x-t",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-f",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-t",
+        "x-f",
+        "x-f",
+        "x-r",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-b><x-r><x-r><x-t><x-l><x-u><x-u><x-u><x-f><x-l><x-u><x-u><x-u><x-b><x-l><x-u><x-u><x-u><x-b><x-t><x-f><x-f><x-r><x-t>",
+      "algorithms": [
+        {
+          "alg": "x R2 F R F' R U2 r' U r U2 x'",
+          "note": ""
+        },
+        {
+          "alg": "L' U' L F L' U' L U L F' L2 U L",
+          "note": ""
+        },
+        {
+          "alg": "R' U L' U2 R U' R' U2 R L",
+          "note": ""
+        },
+        {
+          "alg": "R' U2 R U R' U2 L U' R U L'",
+          "note": ""
+        }
+      ],
+      "primary": "x R2 F R F' R U2 r' U r U2 x'",
+      "alternate": "R' U L' U2 R U' R' U2 R L",
+      "primary_setup": {
+        "setup": "R2' D' F2' D F2' U' F2' U F2' R2'",
+        "auf": "U'",
+        "solver_solution": "R2 F2 U' F2 U F2 D' F2 D R2"
+      }
+    },
+    {
+      "name": "Jb perm",
+      "visual_tokens": [
+        "x-t",
+        "x-b",
+        "x-b",
+        "x-r",
+        "x-t",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-f",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-f",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-t",
+        "x-f",
+        "x-r",
+        "x-r",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-b><x-b><x-r><x-t><x-l><x-u><x-u><x-u><x-f><x-l><x-u><x-u><x-u><x-f><x-l><x-u><x-u><x-u><x-b><x-t><x-f><x-r><x-r><x-t>",
+      "algorithms": [
+        {
+          "alg": "(R U R' F') (R U R' U') R' F R2 U' R' U'",
+          "note": "T perm with last 4 moves shifted to beginning"
+        }
+      ],
+      "primary": "(R U R' F') (R U R' U') R' F R2 U' R' U'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "R2' D B2' D' B2' U B2' U' B2' R2'",
+        "auf": "U",
+        "solver_solution": "R2 B2 U B2 U' B2 D B2 D' R2"
+      }
+    },
+    {
+      "name": "Ra perm",
+      "visual_tokens": [
+        "x-t",
+        "x-b",
+        "x-l",
+        "x-r",
+        "x-t",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-f",
+        "x-b",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-t",
+        "x-f",
+        "x-f",
+        "x-r",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-b><x-l><x-r><x-t><x-l><x-u><x-u><x-u><x-f><x-b><x-u><x-u><x-u><x-r><x-l><x-u><x-u><x-u><x-b><x-t><x-f><x-f><x-r><x-t>",
+      "algorithms": [
+        {
+          "alg": "(R U' R' U') R U (R D R') U' (R D' R') U2 R' U'",
+          "note": ""
+        },
+        {
+          "alg": "R U R' F' R U2 R' U2 R' F R U R U2 R'",
+          "note": ""
+        }
+      ],
+      "primary": "(R U' R' U') R U (R D R') U' (R D' R') U2 R' U'",
+      "alternate": "R U R' F' R U2 R' U2 R' F R U R U2 R'",
+      "primary_setup": {
+        "setup": "U' F2' L2' R2' D R2' D' L2' D F2' L2' U L R B2' L R'",
+        "auf": "U2",
+        "solver_solution": "R L' B2 R' L' U' L2 F2 D' L2 D R2 D' R2 L2 F2 U"
+      }
+    },
+    {
+      "name": "Rb perm",
+      "visual_tokens": [
+        "x-t",
+        "x-f",
+        "x-r",
+        "x-b",
+        "x-t",
+        "x-r",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-b",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-l",
+        "x-b",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-f",
+        "x-t",
+        "x-l",
+        "x-f",
+        "x-l",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-f><x-r><x-b><x-t><x-r><x-u><x-u><x-u><x-r><x-b><x-u><x-u><x-u><x-l><x-b><x-u><x-u><x-u><x-f><x-t><x-l><x-f><x-l><x-t>",
+      "algorithms": [
+        {
+          "alg": "(R' U2 R U2) R' F (R U R' U') R' F' R2",
+          "note": ""
+        }
+      ],
+      "primary": "(R' U2 R U2) R' F (R U R' U') R' F' R2",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "U' R2' B2' D F2' D' R2' D B2' R2' U F2' L' R' U2' L' R'",
+        "auf": "U'",
+        "solver_solution": "R L U2 R L F2 U' R2 B2 D' R2 D F2 D' B2 R2 U"
+      }
+    },
+    {
+      "name": "T perm",
+      "visual_tokens": [
+        "x-t",
+        "x-b",
+        "x-b",
+        "x-r",
+        "x-t",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-f",
+        "x-r",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-l",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-t",
+        "x-f",
+        "x-f",
+        "x-r",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-b><x-b><x-r><x-t><x-l><x-u><x-u><x-u><x-f><x-r><x-u><x-u><x-u><x-l><x-l><x-u><x-u><x-u><x-b><x-t><x-f><x-f><x-r><x-t>",
+      "algorithms": [
+        {
+          "alg": "(R U R' U') R' F R2 U' R' U' (R U R' F')",
+          "note": "J perm with first 4 moves shifted to end"
+        }
+      ],
+      "primary": "(R U R' U') R' F R2 U' R' U' (R U R' F')",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "R2' D B2' U' B2' R2' D' F2' U F2'",
+        "auf": "U",
+        "solver_solution": "F2 U' F2 D R2 B2 U B2 D' R2"
+      }
+    },
+    {
+      "name": "E perm",
+      "visual_tokens": [
+        "x-t",
+        "x-l",
+        "x-b",
+        "x-r",
+        "x-t",
+        "x-f",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-f",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-b",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-t",
+        "x-l",
+        "x-f",
+        "x-r",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-l><x-b><x-r><x-t><x-f><x-u><x-u><x-u><x-f><x-l><x-u><x-u><x-u><x-r><x-b><x-u><x-u><x-u><x-b><x-t><x-l><x-f><x-r><x-t>",
+      "algorithms": [
+        {
+          "alg": "x' (R U' R' D) (R U R' D') (R U R' D) (R U' R' D') x",
+          "note": "4 groups of R U R D"
+        },
+        {
+          "alg": "R' U' R' D' R U' R' D R U R' D' R U R' D R2",
+          "note": ""
+        }
+      ],
+      "primary": "x' (R U' R' D) (R U R' D') (R U R' D) (R U' R' D') x",
+      "alternate": "R' U' R' D' R U' R' D R U R' D' R U R' D R2",
+      "primary_setup": {
+        "setup": "R2' U' B2' U2' L2' U F2' U' L2' U2' B2' U' L R F2' L' R'",
+        "auf": "U2",
+        "solver_solution": "R L F2 R' L' U B2 U2 L2 U F2 U' L2 U2 B2 U R2"
+      }
+    },
+    {
+      "name": "Na perm",
+      "visual_tokens": [
+        "x-t",
+        "x-b",
+        "x-b",
+        "x-f",
+        "x-t",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-l",
+        "x-r",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-l",
+        "x-r",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-t",
+        "x-b",
+        "x-f",
+        "x-f",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-b><x-b><x-f><x-t><x-l><x-u><x-u><x-u><x-l><x-r><x-u><x-u><x-u><x-l><x-r><x-u><x-u><x-u><x-r><x-t><x-b><x-f><x-f><x-t>",
+      "algorithms": [
+        {
+          "alg": "(R U R' U) (R U R' F' R U R' U' R' F R2 U' R') (U2 R U' R')",
+          "note": "R U R' U (J perm) U' R U' R'"
+        },
+        {
+          "alg": "F' R U R' U' R' F R2 F U' R' U' R U F' R'",
+          "note": ""
+        },
+        {
+          "alg": "R F U' R' U R U F' R2 F' R U R U' R' F",
+          "note": ""
+        },
+        {
+          "alg": "r' D r U2 r' D r U2 r' D r U2 r' D r U2 r' D r",
+          "note": ""
+        }
+      ],
+      "primary": "(R U R' U) (R U R' F' R U R' U' R' F R2 U' R') (U2 R U' R')",
+      "alternate": "R F U' R' U R U F' R2 F' R U R U' R' F",
+      "primary_setup": {
+        "setup": "L2' D2' B2' D L2' U2' L2' B2' D L2' F2' U2' L' R U2' L R'",
+        "auf": "U'",
+        "solver_solution": "R L' U2 R' L U2 F2 L2 D' B2 L2 U2 L2 D' B2 D2 L2"
+      }
+    },
+    {
+      "name": "Nb perm",
+      "visual_tokens": [
+        "x-t",
+        "x-f",
+        "x-b",
+        "x-b",
+        "x-t",
+        "x-r",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-r",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-l",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-l",
+        "x-t",
+        "x-f",
+        "x-f",
+        "x-b",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-f><x-b><x-b><x-t><x-r><x-u><x-u><x-u><x-r><x-r><x-u><x-u><x-u><x-l><x-l><x-u><x-u><x-u><x-l><x-t><x-f><x-f><x-b><x-t>",
+      "algorithms": [
+        {
+          "alg": "r' D' F r U' r' F' D r2 U r' U' r' F r F'",
+          "note": "Ends with wide sexy sledge"
+        },
+        {
+          "alg": "R' U R U' R' F' U' F R U R' F R' F' R U' R",
+          "note": ""
+        },
+        {
+          "alg": "R' U L' U2 R U' L R' U L' U2 R U' L",
+          "note": ""
+        }
+      ],
+      "primary": "r' D' F r U' r' F' D r2 U r' U' r' F r F'",
+      "alternate": "R' U L' U2 R U' L R' U L' U2 R U' L",
+      "primary_setup": {
+        "setup": "R2' D2' B2' D' R2' U2' R2' B2' D' R2' F2' U2' L' R U2' L R'",
+        "auf": "U",
+        "solver_solution": "R L' U2 R' L U2 F2 R2 D B2 R2 U2 R2 D B2 D2 R2"
+      }
+    },
+    {
+      "name": "V perm",
+      "visual_tokens": [
+        "x-t",
+        "x-f",
+        "x-r",
+        "x-b",
+        "x-t",
+        "x-r",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-l",
+        "x-t",
+        "x-f",
+        "x-f",
+        "x-b",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-f><x-r><x-b><x-t><x-r><x-u><x-u><x-u><x-r><x-l><x-u><x-u><x-u><x-b><x-l><x-u><x-u><x-u><x-l><x-t><x-f><x-f><x-b><x-t>",
+      "algorithms": [
+        {
+          "alg": "(R' U R' U') (R D' R' D) R' U D' R2 U' R2 D R2",
+          "note": ""
+        },
+        {
+          "alg": "R' U R' U' y R' F' R2 U' R' U R' F R F",
+          "note": ""
+        }
+      ],
+      "primary": "(R' U R' U') (R D' R' D) R' U D' R2 U' R2 D R2",
+      "alternate": "R' U R' U' y R' F' R2 U' R' U R' F R F",
+      "primary_setup": {
+        "setup": "B2' D2' L2' U' F2' D2' L2' U' B2' U2' L2' U L' R B2' L' R",
+        "auf": "U2",
+        "solver_solution": "R' L B2 R' L U' L2 U2 B2 U L2 D2 F2 U L2 D2 B2"
+      }
+    },
+    {
+      "name": "Y perm",
+      "visual_tokens": [
+        "x-t",
+        "x-f",
+        "x-l",
+        "x-b",
+        "x-t",
+        "x-r",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-b",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-l",
+        "x-t",
+        "x-f",
+        "x-f",
+        "x-b",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-f><x-l><x-b><x-t><x-r><x-u><x-u><x-u><x-r><x-b><x-u><x-u><x-u><x-r><x-l><x-u><x-u><x-u><x-l><x-t><x-f><x-f><x-b><x-t>",
+      "algorithms": [
+        {
+          "alg": "F (R U' R' U') (R U R' F') (R U R' U') (R' F R F')",
+          "note": "2 OLLs"
+        },
+        {
+          "alg": "F R' F R2 U' R' U' R U R' F' R U R' U' F'",
+          "note": ""
+        }
+      ],
+      "primary": "F (R U' R' U') (R U R' F') (R U R' U') (R' F R F')",
+      "alternate": "F R' F R2 U' R' U' R U R' F' R U R' U' F'",
+      "primary_setup": {
+        "setup": "F2' D B2' D' L2' U B2' D B2' U' F2' U L R' U2' L' R'",
+        "auf": "U'",
+        "solver_solution": "R L U2 R L' U' F2 U B2 D' B2 U' L2 D B2 D' F2"
+      }
+    },
+    {
+      "name": "Ga perm",
+      "visual_tokens": [
+        "x-t",
+        "x-b",
+        "x-f",
+        "x-r",
+        "x-t",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-f",
+        "x-b",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-l",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-t",
+        "x-f",
+        "x-r",
+        "x-r",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-b><x-f><x-r><x-t><x-l><x-u><x-u><x-u><x-f><x-b><x-u><x-u><x-u><x-l><x-l><x-u><x-u><x-u><x-b><x-t><x-f><x-r><x-r><x-t>",
+      "algorithms": [
+        {
+          "alg": "R2 U R' U R' U' R U' R2 D U' R' U R D'",
+          "note": "Inverse of Gb"
+        }
+      ],
+      "primary": "R2 U R' U R' U' R U' R2 D U' R' U R D'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "U2' L2' D' L2' B2' U' B2' D L2' F2' U L' R U2' L' R'",
+        "auf": "U",
+        "solver_solution": "R L U2 R' L U' F2 L2 D' B2 U B2 L2 D L2 U2"
+      }
+    },
+    {
+      "name": "Gb perm",
+      "visual_tokens": [
+        "x-t",
+        "x-b",
+        "x-l",
+        "x-r",
+        "x-t",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-f",
+        "x-r",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-f",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-t",
+        "x-f",
+        "x-b",
+        "x-r",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-b><x-l><x-r><x-t><x-l><x-u><x-u><x-u><x-f><x-r><x-u><x-u><x-u><x-f><x-l><x-u><x-u><x-u><x-b><x-t><x-f><x-b><x-r><x-t>",
+      "algorithms": [
+        {
+          "alg": "R' U' R U D' R2 U R' U R U' R U' R2 D",
+          "note": "Inverse of Ga"
+        }
+      ],
+      "primary": "R' U' R U D' R2 U R' U R U' R U' R2 D",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "U' F2' L2' R2' D' R2' U R2' U' B2' R2' D L' R F2' L' R'",
+        "auf": "U2",
+        "solver_solution": "R L F2 R' L D' R2 B2 U R2 U' R2 D R2 L2 F2 U"
+      }
+    },
+    {
+      "name": "Gc perm",
+      "visual_tokens": [
+        "x-t",
+        "x-f",
+        "x-r",
+        "x-l",
+        "x-t",
+        "x-r",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-b",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-l",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-t",
+        "x-f",
+        "x-f",
+        "x-r",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-f><x-r><x-l><x-t><x-r><x-u><x-u><x-u><x-b><x-b><x-u><x-u><x-u><x-l><x-l><x-u><x-u><x-u><x-b><x-t><x-f><x-f><x-r><x-t>",
+      "algorithms": [
+        {
+          "alg": "R2 F2 R U2 R U2 R' F R U R' U' R' F R2",
+          "note": ""
+        },
+        {
+          "alg": "R2 U' R U' R U R' U R2 D' U R U' R' D",
+          "note": ""
+        }
+      ],
+      "primary": "R2 F2 R U2 R U2 R' F R U R' U' R' F R2",
+      "alternate": "R2 U' R U' R U R' U R2 D' U R U' R' D",
+      "primary_setup": {
+        "setup": "U' L2' U2' L2' R2' D' F2' D' L2' U L2' U' L R' D2' L' R'",
+        "auf": "U'",
+        "solver_solution": "R L D2 R L' U L2 U' L2 D F2 D R2 L2 U2 L2 U"
+      }
+    },
+    {
+      "name": "Gd perm",
+      "visual_tokens": [
+        "x-t",
+        "x-b",
+        "x-f",
+        "x-r",
+        "x-t",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-f",
+        "x-r",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-t",
+        "x-f",
+        "x-l",
+        "x-r",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-b><x-f><x-r><x-t><x-l><x-u><x-u><x-u><x-f><x-r><x-u><x-u><x-u><x-b><x-l><x-u><x-u><x-u><x-b><x-t><x-f><x-l><x-r><x-t>",
+      "algorithms": [
+        {
+          "alg": "R U R' U' D R2 U' R U' R' U R' U R2 D'",
+          "note": "Mirror of Gb"
+        }
+      ],
+      "primary": "R U R' U' D R2 U' R U' R' U R' U R2 D'",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "L2' U F2' D' L2' D F2' L2' F2' L2' F2' U' L' R U2' L' R'",
+        "auf": "U",
+        "solver_solution": "R L U2 R' L U F2 L2 F2 L2 F2 D' L2 D F2 U' L2"
+      }
+    },
+    {
+      "name": "H perm",
+      "visual_tokens": [
+        "x-t",
+        "x-b",
+        "x-f",
+        "x-b",
+        "x-t",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-r",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-l",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-t",
+        "x-f",
+        "x-b",
+        "x-f",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-b><x-f><x-b><x-t><x-l><x-u><x-u><x-u><x-r><x-r><x-u><x-u><x-u><x-l><x-l><x-u><x-u><x-u><x-r><x-t><x-f><x-b><x-f><x-t>",
+      "algorithms": [
+        {
+          "alg": "M2 U' M2 U2 M2 U' M2",
+          "note": ""
+        }
+      ],
+      "primary": "M2 U' M2 U2 M2 U' M2",
+      "alternate": "",
+      "primary_setup": {
+        "setup": "L2' B2' F2' R2' D' L2' B2' F2' R2' U'",
+        "auf": "U2",
+        "solver_solution": "U R2 F2 B2 L2 D R2 F2 B2 L2"
+      }
+    },
+    {
+      "name": "Ua perm",
+      "visual_tokens": [
+        "x-t",
+        "x-b",
+        "x-b",
+        "x-b",
+        "x-t",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-f",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-l",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-t",
+        "x-f",
+        "x-r",
+        "x-f",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-b><x-b><x-b><x-t><x-l><x-u><x-u><x-u><x-r><x-f><x-u><x-u><x-u><x-l><x-l><x-u><x-u><x-u><x-r><x-t><x-f><x-r><x-f><x-t>",
+      "algorithms": [
+        {
+          "alg": "M2 U M U2 M' U M2",
+          "note": "Inverse of Ub perm"
+        },
+        {
+          "alg": "R U' R U R U R U' R' U' R2",
+          "note": ""
+        },
+        {
+          "alg": "R U R' U R' U' R2 U' R' U R' U R",
+          "note": ""
+        }
+      ],
+      "primary": "M2 U M U2 M' U M2",
+      "alternate": "R U R' U R' U' R2 U' R' U R' U R",
+      "primary_setup": {
+        "setup": "R2' U' F2' L2' B2' D B2' L2' F2' U2' R2' U'",
+        "auf": "U'",
+        "solver_solution": "U R2 U2 F2 L2 B2 D' B2 L2 F2 U R2"
+      }
+    },
+    {
+      "name": "Ub perm",
+      "visual_tokens": [
+        "x-t",
+        "x-b",
+        "x-b",
+        "x-b",
+        "x-t",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-r",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-f",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-t",
+        "x-f",
+        "x-l",
+        "x-f",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-b><x-b><x-b><x-t><x-l><x-u><x-u><x-u><x-r><x-r><x-u><x-u><x-u><x-f><x-l><x-u><x-u><x-u><x-r><x-t><x-f><x-l><x-f><x-t>",
+      "algorithms": [
+        {
+          "alg": "M2 U' M U2 M' U' M2",
+          "note": "Inverse of Ua perm"
+        },
+        {
+          "alg": "R2' U R U R' U' R3 U' R' U R'",
+          "note": ""
+        },
+        {
+          "alg": "R' U R' U' R' U' R' U R U R2",
+          "note": ""
+        }
+      ],
+      "primary": "M2 U' M U2 M' U' M2",
+      "alternate": "R' U R' U' R' U' R' U R U R2",
+      "primary_setup": {
+        "setup": "R2' U2' F2' L2' B2' D' B2' L2' F2' U R2' U",
+        "auf": "U",
+        "solver_solution": "U' R2 U' F2 L2 B2 D B2 L2 F2 U2 R2"
+      }
+    },
+    {
+      "name": "Z perm",
+      "visual_tokens": [
+        "x-t",
+        "x-b",
+        "x-r",
+        "x-b",
+        "x-t",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-f",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-b",
+        "x-l",
+        "x-u",
+        "x-u",
+        "x-u",
+        "x-r",
+        "x-t",
+        "x-f",
+        "x-l",
+        "x-f",
+        "x-t"
+      ],
+      "visual_html": "<x-t><x-b><x-r><x-b><x-t><x-l><x-u><x-u><x-u><x-r><x-f><x-u><x-u><x-u><x-b><x-l><x-u><x-u><x-u><x-r><x-t><x-f><x-l><x-f><x-t>",
+      "algorithms": [
+        {
+          "alg": "M2 U' M2 U' M' U2 M2 U2 M' U2",
+          "note": ""
+        },
+        {
+          "alg": "M' U' M2 U' M2 U' M' U2 M2",
+          "note": ""
+        }
+      ],
+      "primary": "M2 U' M2 U' M' U2 M2 U2 M' U2",
+      "alternate": "M' U' M2 U' M2 U' M' U2 M2",
+      "primary_setup": {
+        "setup": "L2' R2' D' L2' R2' U' L2' B2' L2' R2' F2' R2'",
+        "auf": "U2",
+        "solver_solution": "R2 F2 R2 L2 B2 L2 U R2 L2 D R2 L2"
+      }
+    }
+  ]
+}

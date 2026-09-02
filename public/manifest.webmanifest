@@ -1,0 +1,13 @@
+{
+  "name": "Cube Recall — OLL & PLL trainer",
+  "short_name": "Cube Recall",
+  "description": "A local-first flashcard trainer for OLL and PLL recognition and execution.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f7f5",
+  "theme_color": "#f7f7f5",
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
