@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowLeft, ChevronDown, ChevronRight, RotateCcw, Shuffle, TimerReset } from 'lucide-react';
+import Image from 'next/image';
 import rawData from '@/data/algorithm_data_with_setups.json';
 
 type Algorithm = { alg: string; note: string };
@@ -105,7 +106,7 @@ function shuffleItems<T>(items: T[]) {
   return copy;
 }
 
-function CubeView({ item, twoSides = false }: { item: CaseData; twoSides?: boolean }) {
+function CubeView({ item }: { item: CaseData }) {
   const hostRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     let disposed = false;
@@ -114,16 +115,16 @@ function CubeView({ item, twoSides = false }: { item: CaseData; twoSides?: boole
       if (!hostRef.current) return;
       const { TwistyPlayer } = await import('cubing/twisty');
       if (disposed || !hostRef.current) return;
-      player = new TwistyPlayer({ puzzle: '3x3x3', experimentalSetupAlg: item.primary_setup.setup, visualization: '3D', background: 'none', controlPanel: 'none', backView: twoSides ? 'side-by-side' : 'none', cameraLatitude: 24, cameraLongitude: 32, cameraDistance: twoSides ? 4.4 : 4.8 });
+      player = new TwistyPlayer({ puzzle: '3x3x3', experimentalSetupAlg: `${item.primary_setup.setup} x2`, visualization: '3D', background: 'none', controlPanel: 'none', backView: 'none', cameraLatitude: 24, cameraLongitude: 32, cameraDistance: 4.6 });
       player.style.width = '100%';
-      player.style.height = twoSides ? '210px' : '250px';
+      player.style.height = '250px';
       player.setAttribute('aria-label', `${item.name} cube case`);
       hostRef.current.replaceChildren(player);
     }
     void mount();
     return () => { disposed = true; player?.remove(); };
-  }, [item, twoSides]);
-  return <div className={`cube-stage ${twoSides ? 'cube-stage--two' : ''}`}><div ref={hostRef} className="cube-host" aria-live="polite"><div className="cube-loading">Loading case view…</div></div><span className="cube-caption">{twoSides ? 'two-side view · yellow on top' : 'drag to inspect · yellow on top'}</span></div>;
+  }, [item]);
+  return <div className="cube-stage"><div ref={hostRef} className="cube-host" aria-live="polite"><div className="cube-loading">Loading case view…</div></div><span className="cube-caption">drag to inspect · yellow on top</span></div>;
 }
 
 function StaticPattern({ item }: { item: CaseData }) {
@@ -131,11 +132,18 @@ function StaticPattern({ item }: { item: CaseData }) {
   return <div className="pattern-fallback" aria-hidden="true">{Array.from({ length: 25 }, (_, index) => <span key={index} className={`sticker sticker-${tokens[index] ?? 'div'}`} />)}</div>;
 }
 
+function OLLPattern({ item }: { item: CaseData }) {
+  const [imageFailed, setImageFailed] = useState(false);
+  const caseNumber = item.name.replace('OLL ', '');
+  if (imageFailed) return <div className="oll-pattern oll-pattern-fallback"><StaticPattern item={item} /></div>;
+  return <Image className="oll-image" src={`https://raw.githubusercontent.com/Roman-/oll_trainer/master/pic/${caseNumber}.svg`} alt={`${item.name} OLL case`} width={330} height={330} unoptimized draggable={false} onError={() => setImageFailed(true)} />;
+}
+
 function CountCell({ value, tone }: { value: number; tone: 'new' | 'learning' | 'due' }) {
   return <div className={`count-cell ${tone} ${value === 0 ? 'zero' : ''}`}>{value}</div>;
 }
 
-function DeckDashboard({ progress, onStart }: { progress: ProgressStore; onStart: (deckId: DeckId, mode: SessionMode) => void }) {
+function DeckDashboard({ progress, onStart, onReset }: { progress: ProgressStore; onStart: (deckId: DeckId, mode: SessionMode) => void; onReset: (deckId: DeckId) => void }) {
   const totals = DECKS.reduce((result, deck) => { const counts = countsFor(deck, progress); result.newCount += counts.newCount; result.learning += counts.learning; result.due += counts.due; return result; }, { newCount: 0, learning: 0, due: 0 });
   const dayStart = new Date(); dayStart.setHours(0, 0, 0, 0);
   const studiedToday = Object.values(progress).filter((item) => (item.lastReviewed ?? 0) >= dayStart.getTime()).length;
@@ -143,9 +151,9 @@ function DeckDashboard({ progress, onStart }: { progress: ProgressStore; onStart
     <header className="top-nav"><button className="brand" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Cube Recall</button><nav aria-label="Primary"><span className="nav-link active">Decks</span><span className="nav-link muted">Stats</span></nav><span className="nav-status">{totals.due} due today</span></header>
     <section className="deck-heading"><h1>Decks</h1></section>
     <section className="deck-table" aria-label="Study decks"><div className="deck-table-head"><span>Deck</span><span>New</span><span>Learn</span><span>Due</span><span aria-hidden="true" /></div>
-      {DECKS.map((deck) => { const counts = countsFor(deck, progress); return <article className="deck-row" key={deck.id}><span className="deck-name-cell">{deck.title}</span><CountCell value={counts.newCount} tone="new" /><CountCell value={counts.learning} tone="learning" /><CountCell value={counts.due} tone="due" /><div className="deck-actions"><button className="button button-primary" onClick={() => onStart(deck.id, 'due')}>Study <ChevronRight size={15} /></button></div></article>; })}
+      {DECKS.map((deck) => { const counts = countsFor(deck, progress); return <article className="deck-row" key={deck.id}><span className="deck-name-cell">{deck.title}</span><CountCell value={counts.newCount} tone="new" /><CountCell value={counts.learning} tone="learning" /><CountCell value={counts.due} tone="due" /><div className="deck-actions"><button className="button button-primary" onClick={() => onStart(deck.id, 'due')}>Study <ChevronRight size={15} /></button><button className="button button-reset" onClick={() => onReset(deck.id)} title={`Reset ${deck.title}`} aria-label={`Reset ${deck.title}`}><RotateCcw size={14} /><span>Reset</span></button></div></article>; })}
     </section>
-    <footer className="site-footer"><span>Studied {studiedToday} {studiedToday === 1 ? 'case' : 'cases'} today</span><span>Progress is saved on this device.</span></footer>
+    <footer className="site-footer"><span>Studied {studiedToday} {studiedToday === 1 ? 'case' : 'cases'} today</span><span>Progress is saved on this device.</span><a href="https://github.com/Roman-/oll_trainer/tree/master/pic" target="_blank" rel="noreferrer">OLL diagrams: Roman-/oll_trainer</a></footer>
   </main>;
 }
 
@@ -190,7 +198,7 @@ function StudyView({ deckId, queue, queueIndex, mode, progress, onBack, onShuffl
 
   return <main className="page-shell study-shell"><header className="study-header"><button className="back-button" onClick={onBack}><ArrowLeft size={16} /> <span>Decks</span></button><div className="study-title"><span>{title}</span><strong>{queueIndex + 1} / {queue.length}</strong></div><div className="study-actions"><span className={`mode-label ${mode}`}>{mode === 'shuffle' ? 'Shuffle' : 'Due review'}</span><button className="study-shuffle" onClick={onShuffle}><Shuffle size={14} /> Shuffle</button></div></header><div className="study-progress"><span style={{ width: `${(queueIndex / Math.max(queue.length, 1)) * 100}%` }} /></div>
     <section className="study-card"><div className="case-meta"><div><h1>{item.name}</h1></div><span className="case-count">{saved ? `reviewed ${saved.repetitions}×` : 'new card'}</span></div>
-      <button className={`case-visual ${timerState}`} onPointerDown={onPressStart} onPointerUp={onPressEnd} onPointerCancel={() => { pointerStarted.current = false; if (timerState === 'armed') setTimerState('idle'); }} onKeyDown={onKeyDown} onKeyUp={onKeyUp} aria-label={timerState === 'running' ? 'Tap to stop the timer' : 'Hold and release to start the execution timer'}><div className="visual-frame"><CubeView item={item} twoSides={deckId !== 'oll'} /><div className="visual-fallback"><StaticPattern item={item} /></div></div><div className="timer-readout">{timerState === 'armed' && <span>Release to start</span>}{timerState === 'idle' && <span>Hold + release to start · tap to stop</span>}{timerState === 'running' && <strong>{formatTime(elapsed)}</strong>}{timerState === 'stopped' && <strong>{formatTime(elapsed)}</strong>}</div></button>
+      <button className={`case-visual ${timerState}`} onPointerDown={onPressStart} onPointerUp={onPressEnd} onPointerCancel={() => { pointerStarted.current = false; if (timerState === 'armed') setTimerState('idle'); }} onKeyDown={onKeyDown} onKeyUp={onKeyUp} aria-label={timerState === 'running' ? 'Tap to stop the timer' : 'Hold and release to start the execution timer'}><div className="visual-frame">{deckId === 'oll' ? <OLLPattern item={item} /> : <><CubeView item={item} /><div className="visual-fallback"><StaticPattern item={item} /></div></>}</div><div className="timer-readout">{timerState === 'armed' && <span>Release to start</span>}{timerState === 'idle' && <span>Hold + release to start · tap to stop</span>}{timerState === 'running' && <strong>{formatTime(elapsed)}</strong>}{timerState === 'stopped' && <strong>{formatTime(elapsed)}</strong>}</div></button>
       {isRecognition && <RecognitionPrompt item={item} choices={choices} selected={selectedChoice} onChoose={chooseRecognition} />}
       {!answerShown && !selectedChoice && <button className="dont-know" onClick={revealAsAgain}><RotateCcw size={16} /> I don’t know — show algorithm</button>}
       {answerShown && <AlgorithmReveal item={item} />}
@@ -219,6 +227,7 @@ export default function Home() {
   const persist = useCallback((next: ProgressStore) => { setProgress(next); window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next)); }, []);
   const startStudy = useCallback((nextDeckId: DeckId, nextMode: SessionMode) => { const deck = DECKS.find((candidate) => candidate.id === nextDeckId) ?? DECKS[0]; const items = data[deck.source]; const now = Date.now(); const eligible = nextMode === 'shuffle' ? items : items.filter((item) => { const saved = progress[caseKey(nextDeckId, item)]; return !saved || saved.due <= now; }); const nextQueue = shuffleItems(eligible.length ? eligible : items); setDeckId(nextDeckId); setMode(nextMode); setQueue(nextQueue); setQueueIndex(0); currentRef.current = { deckId: nextDeckId, item: nextQueue[0] }; setView('study'); }, [progress]);
   const saveTime = useCallback((elapsed: number) => { const current = currentRef.current; if (!current.item) return; const key = caseKey(current.deckId, current.item); const existing = progress[key]; if (!existing || existing.bestTimeMs == null || elapsed < existing.bestTimeMs) persist({ ...progress, [key]: { ...(existing ?? { due: Date.now(), interval: 0, repetitions: 0 }), bestTimeMs: elapsed } }); }, [persist, progress]);
+  const resetDeck = useCallback((nextDeckId: DeckId) => { const deck = DECKS.find((candidate) => candidate.id === nextDeckId); if (!deck || !window.confirm(`Reset all progress for ${deck.title}?`)) return; const prefix = `${nextDeckId}:`; const next = Object.fromEntries(Object.entries(progress).filter(([key]) => !key.startsWith(prefix))); persist(next); }, [persist, progress]);
   const advance = useCallback(() => { setQueueIndex((index) => { const nextIndex = index + 1; if (nextIndex >= queue.length) { setView('dashboard'); return index; } currentRef.current = { deckId, item: queue[nextIndex] }; return nextIndex; }); }, [deckId, queue]);
   const nextCard = useCallback(() => { advance(); }, [advance]);
   const grade = useCallback((rating: Rating, elapsed?: number) => { const current = currentRef.current; if (!current.item) return; const key = caseKey(current.deckId, current.item); persist({ ...progress, [key]: nextProgress(progress[key], rating, Date.now(), elapsed) }); window.setTimeout(advance, 0); }, [advance, persist, progress]);
@@ -226,5 +235,5 @@ export default function Home() {
   useEffect(() => { actionsRef.current = { start: startStudy, grade }; }, [grade, startStudy]);
   useEffect(() => { const context = document.modelContext; if (!context?.registerTool) return; const lifecycle = new AbortController(); const register = async () => { await context.registerTool({ name: 'read_cube_recall_decks', title: 'Read deck status', description: 'Read current New, Learning, and Due counts for the three Cube Recall decks.', inputSchema: { type: 'object', properties: {}, additionalProperties: false }, annotations: { readOnlyHint: true }, execute: () => DECKS.map((deck) => ({ deck: deck.title, ...countsFor(deck, progressRef.current) })) }, { signal: lifecycle.signal }); await context.registerTool({ name: 'start_cube_recall_session', title: 'Start study session', description: 'Start a due-review or shuffle session for an OLL, PLL, or PLL recognition deck.', inputSchema: { type: 'object', properties: { deckId: { type: 'string', enum: ['oll', 'pll', 'pll-recognition'] }, mode: { type: 'string', enum: ['due', 'shuffle'] } }, required: ['deckId', 'mode'], additionalProperties: false }, execute: (input) => { const value = input as { deckId?: DeckId; mode?: SessionMode }; if (!value.deckId || !value.mode || !DECKS.some((deck) => deck.id === value.deckId)) throw new Error('Invalid deck or mode'); actionsRef.current.start(value.deckId, value.mode); return { started: true, deckId: value.deckId, mode: value.mode }; } }, { signal: lifecycle.signal }); await context.registerTool({ name: 'rate_cube_recall_card', title: 'Rate current card', description: 'Rate the visible Cube Recall card as Again, Hard, Good, or Easy.', inputSchema: { type: 'object', properties: { rating: { type: 'string', enum: ['again', 'hard', 'good', 'easy'] } }, required: ['rating'], additionalProperties: false }, execute: (input) => { const value = input as { rating?: Rating }; if (!value.rating || !RATING_LABELS.some((rating) => rating.id === value.rating)) throw new Error('Invalid rating'); actionsRef.current.grade(value.rating); return { rated: true, rating: value.rating }; } }, { signal: lifecycle.signal }); }; void register(); return () => lifecycle.abort(); }, []);
   if (view === 'study') return <StudyView key={`${deckId}:${queueIndex}`} deckId={deckId} queue={queue} queueIndex={queueIndex} mode={mode} progress={progress} onBack={() => setView('dashboard')} onShuffle={() => startStudy(deckId, 'shuffle')} onNext={nextCard} onGrade={grade} onSaveTime={saveTime} />;
-  return <DeckDashboard progress={progress} onStart={startStudy} />;
+  return <DeckDashboard progress={progress} onStart={startStudy} onReset={resetDeck} />;
 }
