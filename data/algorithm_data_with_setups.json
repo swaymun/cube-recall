@@ -4768,11 +4768,11 @@
       "visual_html": "<x-t><x-u><x-u><div></div><x-t><div></div><div></div><div></div><div></div><x-u><div></div><x-u><x-u><x-u><div></div><div></div><div></div><div></div><div></div><x-u><x-t><x-u><x-u><div></div><x-t>",
       "algorithms": [
         {
-          "alg": "F (U R U' R') (U R U' R') F'",
+          "alg": "f (U R U' R') (U R U' R') f'",
           "note": ""
         }
       ],
-      "primary": "F (U R U' R') (U R U' R') F'",
+      "primary": "f (U R U' R') (U R U' R') f'",
       "alternate": "",
       "primary_setup": {
         "setup": "B2' L' D2' L' R2' F2' D2' F2' R' F2' L2' R' B' U L U' L' B'",

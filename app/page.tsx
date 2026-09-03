@@ -197,7 +197,8 @@ function shuffleItems<T>(items: T[]) {
 
 function caseSetup(item: CaseData, directF2L = false) {
   const setup = item.primary_setup?.setup ?? item.case_setup ?? invertAlgorithm(item.primary);
-  if (!directF2L || !item.primary_setup?.auf) return setup;
+  if (!item.primary_setup?.auf) return setup;
+  if (!directF2L) return `${setup} ${item.primary_setup.auf}`;
   // F2L recognition is position-sensitive. The generated setup targets an
   // AUF-adjusted version of the case, so finish it with the inverse AUF and
   // land directly on the pictured case without a second adjustment.
@@ -287,7 +288,7 @@ function OLLPattern({ item }: { item: CaseData }) {
 }
 
 function SetupPanel({ item, directF2L = false }: { item: CaseData; directF2L?: boolean }) {
-  return <section className="setup-panel" aria-label="Case setup"><div className="setup-heading"><span>Setup</span><span className="answer-rule" /></div><code>{normalizeAlgorithmText(caseSetup(item, directF2L))}</code>{item.primary_setup?.auf && !directF2L && <span className="setup-auf">AUF: <code>{normalizeAlgorithmText(item.primary_setup.auf)}</code></span>}<p>Apply this setup to a solved cube before starting the timer.</p></section>;
+  return <section className="setup-panel" aria-label="Case setup"><div className="setup-heading"><span>Setup</span><span className="answer-rule" /></div><code>{normalizeAlgorithmText(caseSetup(item, directF2L))}</code><p>Apply this setup to a solved cube before starting the timer.</p></section>;
 }
 
 function CountCell({ value, tone }: { value: number; tone: 'new' | 'learning' | 'due' }) {
@@ -315,7 +316,7 @@ function RatingButtons({ progress, onRate }: { progress?: Progress; onRate: (rat
 function AlgorithmReveal({ item }: { item: CaseData }) {
   const alternates = item.algorithms.slice(1);
   const primaryAlgorithm = item.algorithms[0] ?? { alg: item.primary, note: '' };
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const [highlighted, setHighlighted] = useState(true);
   return <section className="answer-panel" aria-label="Algorithm answer"><div className="answer-heading"><span>Algorithm</span><span className="answer-rule" /><button className="plain-toggle" onClick={() => setHighlighted((value) => !value)}>{highlighted ? 'Plain moves' : 'Highlight moves'}</button></div>{highlighted ? <AlgorithmLine algorithm={primaryAlgorithm} /> : <code className="algorithm-plain">{normalizeAlgorithmText(item.primary)}</code>}{highlighted && <MoveLegend />}{alternates.length > 0 && <><button className="alternate-toggle" onClick={() => setExpanded((value) => !value)}>{expanded ? <ChevronDown size={15} /> : <ChevronRight size={15} />} {expanded ? 'Hide alternates' : `Show ${alternates.length} alternate${alternates.length === 1 ? '' : 's'}`}</button>{expanded && <div className="alternate-list">{alternates.map((algorithm, index) => <div key={`${algorithm.alg}-${index}`}><AlgorithmLine algorithm={algorithm} compact /></div>)}</div>}</>}</section>;
 }
